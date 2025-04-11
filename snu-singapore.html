@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <title>SNU Times - Breaking News,Singapore, world news etc. </title>
+    <meta charset="utf-8">
+    <!--Bootstrap 5.2.0 CSS and Javascript Plug-ins-->
+    <link rel="stylesheet" href ="bootstrap-5.2.0-dist/bootstrap-5.2.0-dist/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="bootstrap-5.2.0-dist/bootstrap-5.2.0-dist/js/bootstrap.min.js"></script>
+   
+    <!-- These are the external stylesheets of SNU Times -->
+    <link rel="stylesheet" href="snutimes-common.css"/>
+    <link rel="stylesheet" href="snu-singapore.css"/>
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+</head>
+<body>
+    <hr>
+    <!--Search page overlay-->
+    <div id="search-page-Overlay" class="overlay">
+        <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+        <div class="overlay-content">
+            <form action="#">
+              <input type="text" placeholder="Search.." name="search">
+              <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+            
+            <br><br><br>
+            <div class="recent-searches-and-topics">
+                <div id="recent-searches">
+                    <h3>Recent Searches <button><h5>Clear X</h5></button></h3>
+                    <hr>
+                    <h5>'High-severity vulnerability' found in Google Chrome browser, SingCERT advises users to install updates</h5>
+                    <h5>Life after Inside Maximum Security for two inmates: No longer behind bars, but it’s no bed of roses</h5>
+                    <h5>Parasite: What the Oscar win means for Korean cinema</h5>
+                </div>
+                <br>
+                <div id="related-topics">
+                    <h3>Related Topics:</h3>
+                    <hr>
+                    <div class="container">
+                    <div class="row">
+                        <div class="col"><input type="button" value="COVID-19"></div>
+                        <div class="col"><input type="button" value="Malaysia"></div>
+                        <div class="col"><input type="button" value="Omnicron"></div>
+                        <div class="col"><input type="button" value="Ukraine Invasion"></div>
+                        <div class="col"><input type="button" value="climate change"></div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Navigation bar of the website-->
+    <div class="news-navbar">
+        <div class="row" id="news-navbar">
+            <div class="col-md"><a href="index.html">S N U</a></div>
+            <div class="col-md"><a href="snu-top-stories.html">Top Stories</a></div>
+            <div class="col-md" id="highlight">Singapore</div>
+            <div class="col-md"><a href="snu-asia.html">Asia</a></div>
+            <div class="col-md">World</div>
+            <div class="col-md"><a href="snu-lifestyle.html">Lifestyle</a></div>
+            <div class="col-md"><a href="snu-business.html">Business</a></div>
+            <div class="col-md"><i class="i fas fa-user-alt"></i> Log In</div>
+            <div class="col-md">Subscribe</div>
+            <div class="col-md">   
+                <i class="i fas fa-search" class="openBtn" onclick="openSearch()">
+                </i>
+            </div>
+            <div class="col-md" class="dropdown">
+                <button class="dropbtn" onclick="myFunction()"><i class="i fas fa-list"></i></button>
+                <div class="dropdown-content" id="myDropdown">
+                <a href="snu-top-stories.html">Top Stories</a>
+                <a href="snu-asia.html">Asia</a>
+                <a href="#">World</a>
+                <a href="snu-lifestyle.html">Lifestyle</a>
+                <a href="snu-business.html">Business</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <!--Javascript functions of the website-->
+    <script>
+        /* When the user clicks on the search icon*/
+        function openSearch() 
+        {
+            document.getElementById("search-page-Overlay").style.display = "block";
+        }
+        
+        /* When the use is at the search page overlay and clicks on the close icon*/
+        function closeSearch() 
+        {
+            document.getElementById("search-page-Overlay").style.display = "none";
+        }
+        
+        /* When the user clicks on the menu button, toggle between hiding and showing the dropdown content */
+        function myFunction() 
+        {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+        
+        /* Close the dropdown content of the menu if the user clicks outside of it*/
+        window.onclick = function(e) 
+        {
+            if (!e.target.matches('.dropbtn')) 
+            {
+                var myDropdown = document.getElementById("myDropdown");
+                if (myDropdown.classList.contains('show')) 
+                {
+                  myDropdown.classList.remove('show');
+                }
+            }
+        }
+    </script>
+    
+    <div class="website-layout">
+        <div class="article-heading">
+            <h6 id="section-resp">Singapore</h6>
+            <h1>Life after "Inside Maximum Security" for inmate: No longer behind bars, but it’s no bed of roses</h1>
+            <h5>Nearly six months after the programme aired, we find out how he is faring outside of prison.</h5>
+        </div>
+
+        <div id="photo-and-credits">
+            <div>
+                <img id="family-photo" src="images/family_group_hug.jpg" width ="100%" height=auto>
+                <p>Graceson Ang received hugs and gifts from his three children, aged seven to 13, during his first visit home in nearly four years on Father's Day.</p>
+            </div>
+            <div class="credits-and-ads">
+                <div id="credits">
+                    <p><i class="i fas fa-user-alt"></i> Marcus Tan Lai He</p>
+                    <p>@snumarcus</p>
+                    <i class="i far fa-bookmark"></i>&nbsp
+                    <i class="i far fa-envelope"></i>&nbsp
+                    <i class="i fab fa-whatsapp"></i>&nbsp
+                    <i class="i fas fa-sms"></i>
+                </div>
+                <br>
+                <div class="shoe-advertisement">
+                    <img src="advertisements/sneakers-nike.jpg" width="60%" height=auto>
+                </div>
+            </div>
+        </div>
+
+        <div class="article-description">
+        <hr>
+            <div class="row">
+                <div class="col-md-8">
+                    <br>
+                    <p class="article-text">
+                        On the day he was transferred from prison to a halfway house, Graceson Ang felt as if his heart was going to “jump out” of his chest.He was going to meet his family in the flesh, without any glass barrier or only on a screen, for the first time in nearly four years.
+                    <br><br>
+                        “The most anxious part is waiting for my family to come,” he told SNU producer Marcus Tan on May 25 after arriving at The Helping Hand, where he would spend nearly six months as part of a Singapore Prison Service community-based programme for inmates serving the tail-end of their sentences.
+                    <br><br>
+                        “I'm hoping that my whole family will come but from what I know, my eldest daughter is having a school camp so I don't know whether she can make it or not.”
+                    <br><br>
+                        She couldn’t, but Graceson’s wife and two younger children did. The kids had been “really excited the whole day”, his wife told him.
+                    <br><br>
+                        Besides precious time with his family, Graceson, 37, also revelled in being able to reach out his hand to feel drops of rain, as well as the sun on his skin. These were things he did not get to experience in prison.
+                    <br><br>
+                        But the extra freedom came with many rules to observe.
+                    <br><br>
+                        For instance, he would not be able to go on home leave during the first month at the halfway house. He would have to undergo urine testing as well as tests to ensure he did not smoke or consume alcohol.
+                    <br><br>
+                        Failing the smokerlyser or breathalyser test would mean not being able to go on home leave for four times; testing positive for a third time would land him back in prison.
+                    <br><br>
+                        He would sleep in a 12-man room, with lights off at 10.30pm.
+                        Graceson – who was sentenced to six years and five months in jail plus 21 strokes of the cane for carrying weapons, drug consumption and criminal intimidation – would also work as a mover for the first two months, and could pursue jobs at other companies later on if he wanted.
+                    <br><br>
+                        “This is where the reality sets in,” said his reintegration officer Ponnarasi Gopal Chandra, reminding Graceson that she was here to provide support.
+                    </p>
+                </div>
+                <div class="col-6 col-md-4" id="related-stuff">
+                    <br>
+                    <h4>Related Topics :</h4>
+                    <div class="container">
+                        <div class="row" id="related-topics">
+                            <div class="col"><input type="button" value="SPS"></div>
+                            <br><br>
+                            <div class="col"><input type="button" value="second chances"></div>
+                            <br><br>
+                            <div class="col"><input type="button" value="prison"></div>
+                            <br><br>
+                            <div class="col"><input type="button" value="family"></div>
+                        </div>
+                    </div>
+                    <hr>
+
+                    <h4>Worth Reading :</h4>
+
+                        <div id="related-article-1">
+                            <img src="images/supreme-court-file.webp" width="100%" height=auto>
+                            <p>Six trainee lawyers who cheated in exams withdraw Bar applications</p>
+                        </div>
+                        <hr>
+                        <div id="related-article-2">
+                            <img src="images/stranger-things-cast.webp" width="100%" height=auto>
+                            <p>Tokyo diners nosh on Demogorgon pasta, Eleven's waffles at Stranger Things cafe</p>
+                        </div>
+                    <hr>
+                    <br>
+                    <img src="advertisements/snickers.jpg" width="100%" height=auto>
+                </div>    
+            </div>
+        </div>
+        <br>
+    </div>
+</body>
+<hr>
+<!--The footer of the webpage-->
+<footer>
+    <div class="footer-section">
+        <div class="row">
+            <div class="col-md-3" id="snu-subscribe">
+                <br>
+                <img id="news-paywall" src="advertisements/news-paywall.jpg">
+                <h4>Subscribe Today</h4>
+                <p>Enjoy unlimited access to exclusive stories and analyses by the SNU Media Group</p>
+                <div class="subscribe-box">
+                    <form action="#">
+                        <div class="form-box">
+                            <input type="text" name="EmailAddress" placeholder="Enter your email">
+                            <button type="submit"> Subscribe</button>
+                        </div> 
+                    </form>
+                </div><br>
+            </div>
+            
+            <div class="col-md-3" id="snu-sections">
+                
+                <ul>
+                    <li class="snu-sections">Asia</li>
+                    <li class="snu-sections">World</li>
+                    <li class="snu-sections">Singapore</li>
+                    <li class="snu-sections">Lifestyle</li>
+                    <li class="snu-sections">Business</li>
+                    <li class="snu-sections">Opinion</li>
+                
+                </ul>
+             
+                <ul>
+                    <li class="snu-sections">Technology</li>
+                    <li class="snu-sections">Multimedia</li>
+                    <li class="snu-sections">Sport</li>
+                    <li class="snu-sections">Videos</li>
+                    <li class="snu-sections">Podcasts</li>
+                
+                </ul>
+              
+            </div>
+                
+            
+            <div class="col-md-3" id="about-snu">
+            <ul>
+                <p class="about-snu">About Us</p>
+                <p class="about-snu">Contact Us</p>
+                <p class="about-snu">Terms & Conditions</p>
+                <p class="about-snu">Data Protection Policy</p>
+                <p class="about-snu">Need help? Reach us here.</p>
+                <p class="about-snu">Advertise with us</p>
+                </ul>
+            </div>
+
+            
+            <div class="col-md-3" id="snu-follow">
+                <div class="container text-center">
+                    <div class="row row-cols-2">
+                        <div class="col">
+                            <p class="snu-follow"><i class="i fas fa-file-pdf"></i> e-PDF </p>
+                            <hr>
+                        </div>
+                        <div class="col">
+                            <p class="snu-follow"><i class="i fab fa-instagram"></i> Instagram </p>
+                            <hr>
+                        </div>
+                        <div class="col">
+                            <p class="snu-follow"><i class="i fab fa-twitter"></i> Twitter</p>
+                            <hr>
+                        </div>
+                        <div class="col">
+                            <p class="snu-follow"><i class="i fab fa-facebook-f"></i> Facebook</p>
+                            <hr>
+                        </div>
+                        <div class="col">
+                            <p class="snu-follow"><i class="i fab fa-youtube"></i> Youtube</p>
+                            <hr>
+                        </div>
+                        <div class="col">
+                            <p class="snu-follow"><i class="i fas fa-podcast"></i> Podcasts</p>
+                            <hr>
+                        </div>
+                        <div class="col">
+                            <p class="snu-follow"><i class="i fab fa-telegram"></i> Telegram</p>
+                            <hr>
+                        </div>
+                        <div class="col">
+                            <p class="snu-follow"><i class="i fab fa-linkedin"></i> LinkedIn</p>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="go-back-top">
+                    <a href="snu-singapore.html">BACK TO TOP 
+                        <i class="i fas fa-arrow-alt-circle-up"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--The copyright statement at the bottom of the footer-->
+    <hr>
+    <div class="copyright">
+        <h6>Copyright© SNU Media 2022. SNU Entertainment Pte Ltd. All rights reserved</h6>
+    </div>
+</footer>
+</html>

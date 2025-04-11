@@ -1,0 +1,399 @@
+h6
+{
+    text-align: center;
+}
+
+#section-resp
+{
+    color: firebrick;
+}
+
+/*This is to style the layout of the website*/
+.website-layout
+{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+/*Navigation Bar Stylesheet*/
+.news-navbar
+{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #E1E1E1;
+}
+#news-navbar
+{
+    text-align: center;
+    font-size: calc(13px + 0.390625vw);
+    font-family: Helvetica, sans-serif;
+    font-weight: 800;
+    padding:10px;
+    width: auto;
+}
+#news-navbar .col-md
+{
+    padding: 10px;
+}
+a
+{
+    color: black;
+    text-decoration: none;
+}
+a:hover
+{
+    color: firebrick;
+}
+#highlight
+{
+    color: firebrick;
+}
+
+
+/*This is to style the lines that separate the sections in the website*/
+hr
+{
+    width:100%;
+    color: black;
+    margin: 5px;
+}
+
+/*Footer Stylesheet*/
+.footer-section
+{
+    background: #E1E1E1;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+#news-paywall
+{
+    width: 100%;   
+}
+#snu-sections
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-left: 20px;
+}
+.snu-subscribe , .snu-sections , .about-snu , .snu-follow
+{
+    font-size: calc(10px + 0.390625vw);
+    font-family: Helvetica, sans-serif;
+    font-weight: 600;
+    margin: 15px;
+}
+#snu-sections , #about-snu , #snu-follow  
+{
+    border-left: 1px dotted rgba(156,156,156);
+    padding-left: 20px;
+} 
+
+
+/*Subscribe Box Stylesheet*/
+.subscribe-box
+{
+    display:flex;
+}
+.form-box
+{
+    padding: 5px;
+    border-radius: 5px;
+    background: #ececec;
+   
+}
+.form-box input
+{
+    font-size: calc(8px + 0.390625vw);
+    color: black;
+    border: none;
+    outline: none;
+    background: #ececec;
+}
+.form-box button
+{
+    color:#fff;
+    padding: 10px 15px;
+    font-size: calc(8px + 0.390625vw);
+    border: none;
+    border-radius: 5px;
+    background: #4769d8;
+    cursor: pointer;
+    transition: .5s;
+}
+.form-box button:hover
+{
+    background: #2e54d3;
+}
+
+
+/*Search Pop-up Stylesheet*/
+* 
+{
+    box-sizing: border-box;
+}
+.openBtn 
+{
+    background: #f1f1f1;
+    border: none;
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.openBtn:hover 
+{
+    background: #bbb;
+}
+.overlay {
+    height: 100%;
+    width: 100%;
+    display: none;
+    position: fixed;
+    z-index: 150;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+}
+.overlay-content 
+{
+    position: relative;
+    top: 10%;
+    width: 85%;
+    margin-top: 30px;
+    margin: auto;
+}
+.recent-searches-and-topics
+{
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+}
+#recent-searches button 
+{
+    float: right;
+    padding: 0px;
+    width: 75px;
+    font-family: 
+}
+#related-topics input
+{
+    width: 150px;
+}
+.overlay .closebtn 
+{
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    font-size: 45px;
+    cursor: pointer;
+    color: white;
+}
+.overlay .closebtn:hover 
+{
+    color: #ccc;
+}
+.overlay input[type=text] 
+{
+    padding: 15px;
+    font-size: 17px;
+    border: none;
+    float: left;
+    width: 85%;
+    background: white;
+}
+.overlay input[type=text]:hover 
+{
+    background: #f1f1f1;
+}
+.overlay button 
+{
+    float: left;
+    width: 15%;
+    padding: 15px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+.overlay button:hover 
+{
+    background: #bbb;
+}
+
+
+/*Menu Drop-down Stylesheet*/
+.dropdown 
+{
+    float: left;
+    overflow: hidden;
+}
+.dropbtn 
+{
+    cursor: pointer;
+    font-size: calc(14px + 0.390625vw);;
+    padding: 5px 10px;
+    position: absolute;
+    bottom: 10px;
+    right: 45px;
+    font-family: inherit;
+    margin: 0px;
+}
+.dropdown:hover .dropbtn , .dropbtn:focus
+{
+    background-color: #E1E1E1;
+}
+.dropdown-content 
+{
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 15px;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 125;
+}
+.dropdown-content a 
+{
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.dropdown-content a:hover 
+{
+    background-color: #ddd;
+}
+.show 
+{
+    display: block;
+}
+
+/*Media Queries*/
+
+/*Iphone 6,6s,7and 8*/
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px)
+{
+    #news-navbar
+    {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    #news-navbar .col-md
+    {
+        padding: 5px;
+        font-size: calc(10px + 0.390625vw);
+    }
+    
+    .dropbtn
+    {
+        font-size: calc(10px + 0.390625vw);
+        padding: 3px 10px;
+    }
+    
+    .dropdown-content
+    {
+        top: 40px;
+    }
+    
+    #snu-sections ul
+    {
+        padding: 0px;
+    }
+    
+    .form-box button
+    {
+        position: absolute;
+        padding: 5px 10px;
+    }
+}
+
+/*Ipad 3,4 and Pro 9*/
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+{
+    #news-navbar
+    {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    #news-navbar .col-md
+    {
+        padding: 5px;
+        font-size: calc(10px + 0.390625vw);
+    }
+    
+    .dropbtn
+    {
+        font-size: calc(10px + 0.390625vw);
+        padding: 3px 10px;
+        position: absolute;
+        bottom: 10px;
+    }
+    
+    .dropdown-content
+    {
+        top: 40px;
+    }
+    
+    #snu-sections ul
+    {
+        padding: 10px;
+    }
+    
+    .form-box button
+    {
+        position: absolute;
+        padding: 5px 10px;
+    }
+}
+
+/*Non-Retina Screens*/
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+{
+    #news-navbar
+    {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    #news-navbar .col-md
+    {
+        padding: 5px;
+        font-size: calc(12px + 0.390625vw);
+    }
+    
+    .dropbtn
+    {
+        font-size: calc(10px + 0.390625vw);
+        padding: 5px 10px;
+        position: absolute;
+        bottom: 10px;
+    }
+    
+    .dropdown-content
+    {
+        top: 40px;
+    }
+    
+    #snu-sections ul
+    {
+        padding: 15px;
+    }
+    
+    .form-box button
+    {
+        position: absolute;
+        padding: 5px 10px;
+    }    
+}

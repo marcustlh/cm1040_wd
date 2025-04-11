@@ -1,0 +1,277 @@
+/*This is to style the heading of the article*/
+.article-heading
+{
+    text-align: center;
+    margin-left:150px;
+    margin-right: 150px;
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
+
+/*This is to style the article photo, "Recommended" section and the credits section */
+#photo-and-credits
+{
+    display:grid;
+    grid: auto/3fr 1fr;
+    margin-left:100px;
+    margin-right: 100px;
+    grid-column-gap: 30px;
+}
+#credits
+{
+    font-size:calc(13px + 0.390625vw);
+}
+#credits p
+{
+    margin: auto;
+}
+.recommended
+{
+    display: grid;
+    grid:auto/1fr 1fr;
+    grid-column-gap: 10px;
+}
+
+
+.article-description
+{
+    margin-left:150px;
+    margin-right: 150px;
+    
+}
+
+/*This is to style the text of the "Lifestyle" article*/
+#start-letter
+{
+    font-size: calc(40px + 0.390625vw);
+}
+.article-text
+{
+    text-align: left;
+    font-size:calc(16px + 0.390625vw);
+    font-weight: 200;
+    font-family: Times New Roman,serif;
+}
+
+/*This is to style the photos and quotes of the "Lifestyle" article*/
+#photo-and-quote
+{
+    display: grid;
+    grid: auto/ 3fr 2fr;
+}
+#quote
+{
+    text-align: center;
+    padding: 200px;
+    padding-left: 75px;
+    padding-right: 75px;
+    font-style: oblique;
+    font-weight: 900;
+    font-family: Times New Roman,serif;
+}
+#quote-2
+{
+    padding-left: 75px;
+    padding-right: 75px;
+    font-style: oblique;
+    font-weight: 900;
+    font-family: Times New Roman,serif;
+}
+
+/*This is to style the related topics of the "Lifestyle" article*/
+.related-topics
+{
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    background-color: #9C9C9C;
+    padding: 10px;
+}
+.related-topics hr , #credits hr
+{
+    width:auto;
+}
+.rl-topic
+{
+    display: grid;
+    grid: auto/1fr 5fr;
+}
+.rl-topic h4
+{
+    margin: 20px;
+}
+
+/*Media Queries*/
+
+/*Iphone 6,6s,7and 8*/
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px)
+{
+    .dropbtn
+    {
+        font-size: calc(10px + 0.390625vw);
+        padding: 3px 10px;
+        position: absolute;
+        bottom: 30px;
+    }
+    
+    .article-heading
+    {
+        margin-left:75px;
+        margin-right: 75px;   
+    }
+    
+    #photo-and-credits , .article-description
+    {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    
+    #photo-and-credits h4
+    {
+        font-size: calc(14px + 0.390625vw); 
+    }
+    
+    .recommended h6
+    {
+        font-size: calc(8px + 0.390625vw);
+    }
+    
+    .related-topics h4
+    {
+        font-size: calc(14px + 0.390625vw); 
+    }
+    
+    #quote
+    {
+        padding: 40px;
+    }
+    
+    #quote-2
+    {
+        padding-left: 30px;
+        padding-right: 0px;
+    }
+    
+    #quote-2 h1
+    {
+        font-size: calc(28px + 0.390625vw);
+    }
+}
+
+/*Ipad 3,4 and Pro 9*/
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+{
+    .dropbtn
+    {
+        font-size: calc(10px + 0.390625vw);
+        padding: 3px 10px;
+        position: absolute;
+        bottom: 30px;
+    }
+    
+    .article-heading
+    {
+        margin-left:75px;
+        margin-right: 75px;   
+    }
+    
+    #photo-and-credits , .article-description
+    {
+        margin-left: 50px;
+        margin-right: 50px;
+    }  
+    
+    #photo-and-credits h4
+    {
+        font-size: calc(14px + 0.390625vw); 
+    }
+    
+    .recommended h6
+    {
+        font-size: calc(8px + 0.390625vw);
+    }
+    
+    .related-topics h4
+    {
+        font-size: calc(16px + 0.390625vw); 
+    }
+    
+    #quote
+    {
+        padding: 40px;
+        padding-top: 20px;
+    }
+    
+    #quote-2
+    {
+        padding-left: 20px;
+        padding-right: 0px;
+    }
+    
+    #quote-2 h1
+    {
+        font-size: calc(28px + 0.390625vw);
+    }
+}
+
+/*Non-Retina Screens*/
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+{
+    .dropbtn
+    {
+        font-size: calc(10px + 0.390625vw);
+        padding: 3px 10px;
+        position: relative;
+        top: 2px;
+    }
+    
+    .dropdown-content
+    {
+        top: 55px;
+    }
+    
+    .article-description
+    {
+        margin-left:100px;
+        margin-right: 100px;
+
+    } 
+    
+    #photo-and-credits h4
+    {
+        font-size: calc(16px + 0.390625vw); 
+    }
+    
+    .recommended h6
+    {
+        font-size: calc(10px + 0.390625vw);
+    }
+    
+    .related-topics h4
+    {
+        font-size: calc(16px + 0.390625vw); 
+    }
+    
+    #quote
+    {
+        padding: 40px;
+        margin: auto;
+    }
+    
+    #quote-2
+    {
+        padding-left: 30px;
+        padding-right: 0px;
+        margin: auto;
+    }
+    
+    #quote-2 h1
+    {
+        font-size: calc(30px + 0.390625vw);
+    }
+}

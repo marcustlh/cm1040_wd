@@ -1,0 +1,124 @@
+/*This is to style the related topics of the "Business" article*/
+.popup
+{
+    opacity: 0;
+    animation: popup 2s 1s ease forwards;
+}
+@keyframes popup
+{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+.biz-related-topics
+{
+    display: grid;
+    grid: auto/ 1fr 1fr;
+    grid-column-gap: 30px;
+    background-color: #BFBFBF;
+    border-radius: 10px;
+}
+#brl-topic
+{
+    display: grid;
+    grid: auto/ 2fr 3fr;
+    grid-column-gap: 20px;
+}
+#img
+{
+    border-radius: 20px;
+    width: 100%;
+    height: auto;
+    padding: 10px
+}
+#brl-description
+{
+    margin: auto;
+}
+
+/*This is to style the heading of the "Business" article*/
+.article-heading
+{
+    text-align: center;
+    margin-left:125px;
+    margin-right:125px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/*This is to style the photo and credits of the "Business" article*/
+#photo-and-credits
+{
+    display:grid;
+    grid: auto/2fr 1fr;
+    margin-left:150px;
+    margin-right: 150px;
+    grid-column-gap: 40px;
+}
+#credits
+{
+    font-size: calc(16px + 0.390625vw);
+    padding: auto;
+}
+
+.article-description
+{
+    margin-left:150px;
+    margin-right: 150px;
+}
+
+/*This is to style the text of the "Business" article*/
+.article-text
+{
+    text-align: left;
+    font-size:calc(16px + 0.390625vw);
+    font-family: Bahnschrift SemiBold,serif;
+}
+
+/*Media Queries*/
+
+/*Iphone 6,6s,7and 8*/
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px)
+{
+    .dropbtn
+    {
+        font-size: calc(10px + 0.390625vw);
+        padding: 3px 10px;
+        position: absolute;
+        bottom: 30px;
+    }
+}
+
+/*Ipad 3,4 and Pro 9*/
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+{
+    .dropbtn
+    {
+        font-size: calc(10px + 0.390625vw);
+        padding: 3px 10px;
+        position: absolute;
+        bottom: 30px;
+    }
+}
+    
+/*Non-Retina Screens*/
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+{
+    .dropbtn
+    {
+        font-size: calc(10px + 0.390625vw);
+        padding: 3px 10px;
+        position: relative;
+        top: 2px;
+    }
+    
+    .dropdown-content
+    {
+        top: 55px;
+    }
+}

@@ -1,0 +1,248 @@
+/*This is to style the heading of the "Asia" article*/
+.article-heading
+{
+    display: grid;
+    grid: auto/1.5fr 5fr;
+    margin: 150px;
+    margin-bottom: 20px;
+    margin-top: 75px;
+    grid-column-gap: 40px;
+}
+.article-heading #section-resp
+{
+    padding: 25px;
+    text-align: center;
+    
+}
+
+/*This is to style the photo and credits of the "Asia" article*/
+.photo-and-credits
+{
+    display: grid;
+    grid:auto/1fr 3.5fr;
+    margin-left: 175px;
+    margin-right: 175px;
+    grid-column-gap: 20px;
+    
+}
+#credits p
+{
+    margin: auto;
+    font-size: calc(16px + 0.390625vw);
+}
+#img
+{
+    border-radius: 20px;
+    width: 100%;
+    height: auto;
+}
+
+.article-description
+{
+    margin-left:150px;
+    margin-right: 150px;
+    
+}
+
+/*This is to style the "Recommended" section of the "Asia" article*/
+.recommended
+{
+    background-color: #FFCE44;
+    width: 100%;
+    height: 10%;
+    border-radius: 20px;
+    padding: 10px;
+}
+.rec-topics
+{
+    padding: 10px;
+    background-color: #BFBFBF;
+    height:100%;
+    width: 105%;
+    border-radius: 20px;
+}
+
+/*This is to style the text of the "Asia" article*/
+.article-text
+{
+    text-align: left;
+    font-size:calc(16px + 0.390625vw);
+    font-weight: 200;
+    font-family: Bahnschrift Light,serif;
+}
+
+/*This is to style the "Sign-Up Box"*/
+.asia-insider-signup
+{
+    padding: 20px;
+    background-color: #BFBFBF;
+    border-radius: 20px;
+}
+.signup-box
+{
+    display:flex;
+}
+#signup-box
+{
+    padding:10px 50px;
+    width: 350px;
+    background: #ececec;
+}
+#signup-box input
+{
+    font-size: calc(12px + 0.390625vw);
+    color: black;
+    border: none;
+    outline: none;
+    background: #ececec;
+}
+#signup-box #input
+{
+    position: relative;
+    right: 40px;
+    width:300px;
+}
+.signup-box button
+{
+    color:#fff;
+    padding: 10px 20px;
+    font-size: calc(11px + 0.390625vw);
+    border: none;
+    background: #4769d8;
+    cursor: pointer;
+    transition: .5s;
+}
+.signup-box button:hover
+{
+    background: #2e54d3;
+}
+
+/*This is to highlight certain words of the "Asia" article*/
+span
+{
+    color: blue;
+}
+
+/*This is to style the second photo and the "Related Topics" section of the "Asia" article*/
+.photo-and-related-topics
+{
+    display: grid;
+    grid:auto/5fr 3fr;
+    grid-column-gap: 20px;
+}
+.related-topics
+{
+    background-color: #9C9C9C;
+    padding: 10px;
+    border-radius: 20px;
+    margin: auto;
+}
+
+/*Media Queries*/
+
+/*Iphone 6,6s,7and 8*/
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px)
+{
+    .dropbtn
+    {
+        font-size: calc(10px + 0.390625vw);
+        padding: 3px 10px;
+        position: absolute;
+        bottom: 30px;
+    }
+    
+    .article-heading , .photo-and-credits , .article-description
+    {
+        margin-left: 75px;
+        margin-right: 75px;
+    } 
+    
+    .recommended h3
+    {
+        font-size: calc(18px + 0.390625vw);
+    }
+    
+    .rec-topics h4
+    {
+        font-size: calc(14px + 0.390625vw);
+    }
+    
+    .related-topics h4
+    {
+        font-size: calc(14px + 0.390625vw);   
+    }
+}
+
+/*Ipad 3,4 and Pro 9*/
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+{
+    .dropbtn
+    {
+        font-size: calc(10px + 0.390625vw);
+        padding: 3px 10px;
+        position: absolute;
+        bottom: 30px;
+    }
+    
+    .article-heading , .photo-and-credits , .article-description
+    {
+        margin-left: 50px;
+        margin-right: 50px;
+    } 
+    .recommended h3
+    {
+        font-size: calc(18px + 0.390625vw);
+    }
+    
+    .rec-topics h4
+    {
+        font-size: calc(14px + 0.390625vw);
+    }
+    .related-topics h4
+    {
+        font-size: calc(14px + 0.390625vw);   
+    }
+}
+
+/*Non-Retina Screens*/
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+{
+    .dropbtn
+    {
+        font-size: calc(10px + 0.390625vw);
+        padding: 3px 10px;
+        position: relative;
+        top: 2px;
+    }
+    
+    .dropdown-content
+    {
+        top: 55px;
+    }
+    
+    .article-heading , .photo-and-credits , .article-description
+    {
+        margin-left: 75px;
+        margin-right: 75px;
+    } 
+    .recommended h3
+    {
+        font-size: calc(22px + 0.390625vw);
+    }
+    
+    .rec-topics h4
+    {
+        font-size: calc(16px + 0.390625vw);
+    }
+    .related-topics h4
+    {
+        font-size: calc(16px + 0.390625vw);   
+    }    
+}
+

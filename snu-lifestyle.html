@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <title>SNU Times - Breaking News,Singapore, world news etc. </title>
+    <meta charset="utf-8">
+    <!--Bootstrap 5.2.0 CSS and Javascript Plug-ins-->
+    <link rel="stylesheet" href ="bootstrap-5.2.0-dist/bootstrap-5.2.0-dist/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="bootstrap-5.2.0-dist/bootstrap-5.2.0-dist/js/bootstrap.min.js"></script>
+   
+    <!-- These are the external stylesheets of SNU Times -->
+    <link rel="stylesheet" href="snutimes-common.css"/>
+    <link rel="stylesheet" href="snu-lifestyle.css"/>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+</head>
+<body>
+    <hr>
+    <!--Search page overlay-->
+    <div id="search-page-Overlay" class="overlay">
+        <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+        <div class="overlay-content">
+            <form action="#">
+              <input type="text" placeholder="Search.." name="search">
+              <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+            
+            <br><br><br>
+            <div class="recent-searches-and-topics">
+                <div id="recent-searches">
+                    <h3>Recent Searches <button><h5>Clear X</h5></button></h3>
+                    <hr>
+                    <h5>'High-severity vulnerability' found in Google Chrome browser, SingCERT advises users to install updates</h5>
+                    <h5>Life after Inside Maximum Security for two inmates: No longer behind bars, but it’s no bed of roses</h5>
+                    <h5>Parasite: What the Oscar win means for Korean cinema</h5>
+                </div>
+                <br>
+                <div id="related-topics">
+                    <h3>Related Topics:</h3>
+                    <hr>
+                    <div class="container">
+                    <div class="row">
+                        <div class="col"><input type="button" value="COVID-19"></div>
+                        <div class="col"><input type="button" value="Malaysia"></div>
+                        <div class="col"><input type="button" value="Omnicron"></div>
+                        <div class="col"><input type="button" value="Ukraine Invasion"></div>
+                        <div class="col"><input type="button" value="climate change"></div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Navigation bar of the website-->
+    <div class="news-navbar">
+        <div class="row" id="news-navbar">
+            
+            <div class="col-md"><a href="index.html">S N U</a></div>
+            <div class="col-md"><a href="snu-top-stories.html">Top Stories</a></div>
+            <div class="col-md"><a href="snu-singapore.html">Singapore</a></div>
+            <div class="col-md"><a href="snu-asia.html">Asia</a></div>
+            <div class="col-md">World</div>
+            <div class="col-md" id="highlight">Lifestyle</div>
+            <div class="col-md"><a href="snu-business.html">Business</a></div>
+            <div class="col-md"><i class="i fas fa-user-alt"></i> Log In</div>
+            <div class="col-md">Subscribe</div>
+            <div class="col-md">   
+                <i class="i fas fa-search" class="openBtn" onclick="openSearch()">
+                </i>
+            </div>
+            <div class="col-md" class="dropdown">
+                    <button class="dropbtn" onclick="myFunction()"><i class="i fas fa-list"></i></button>
+                    <div class="dropdown-content" id="myDropdown">
+                    <a href="snu-top-stories.html">Top Stories</a>
+                    <a href="snu-asia.html">Asia</a>
+                    <a href="#">World</a>
+                    <a href="snu-lifestyle.html">Lifestyle</a>
+                    <a href="snu-business.html">Business</a>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <!--Javascript functions of the website-->
+    <script>
+        /* When the user clicks on the search icon*/
+        function openSearch() 
+        {
+            document.getElementById("search-page-Overlay").style.display = "block";
+        }
+        
+        /* When the use is at the search page overlay and clicks on the close icon*/
+        function closeSearch() 
+        {
+            document.getElementById("search-page-Overlay").style.display = "none";
+        }
+
+        /* When the user clicks on the menu button, toggle between hiding and showing the dropdown content */
+        function myFunction() 
+        {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        /* Close the dropdown content of the menu if the user clicks outside of it*/
+        window.onclick = function(e) 
+        {
+            if (!e.target.matches('.dropbtn')) 
+            {
+                var myDropdown = document.getElementById("myDropdown");
+                if (myDropdown.classList.contains('show')) 
+                {
+                    myDropdown.classList.remove('show');
+                }
+            }
+        }
+    </script>
+    
+    <div class="website-layout">
+        <div class="article-heading">
+            <h6 id="section-resp">Lifestyle</h6>
+            <h1>How Kwong Cheong Thye’s fifth-gen scion is modernising his family’s 130-year-old soya sauce business</h1>
+            <h5>Alvin Choo, the 28-year-old co-owner of soya sauce manufacturer Kwong Cheong Thye, believes stability for his family business will only be achieved through innovation.</h5>
+        </div>
+        <div id="photo-and-credits">
+            <div>
+                <img src="images/kwong-cheong-thye.png" width ="100%" height=auto>
+                <h6>Alvin Choo is the co-owner of Kwong Cheong Thye, a soya sauce manufacturer in Singapore. </h6>
+            </div>
+            <div>
+                <hr>
+                <h4>Related Topics :</h4>
+                    <div class="container">
+                        <div class="row" id="related-topics">
+                            <div class="col"><input type="button" value="Profiles"></div>
+                            <div class="col"><input type="button" value="Food & Drink"></div>
+                        </div>
+                    </div>
+                <hr>
+                <h4>Recommended</h4>
+                <div class="recommended">
+                    <div>
+                        <img src="images/will_butler_adams_brompton.jfif" width="100%" height=auto>
+                        <h6>Brompton bike CEO: 'People have no idea what goes into a product. That’s not a good thing'</h6>
+                    </div>
+                    <div>
+                        <img src="images/raumplan_house_singapore_house_tour.jfif" width="100%" height=auto>
+                        <h6>The Raumplan House: An intermediate terrace house in Singapore filled with light and greenery</h6>
+                    </div>
+                </div>
+                <hr>
+                <div id="credits">
+                    <p><i class="i fas fa-user-alt"></i> by Marcus Tan Lai He
+                    <br>
+                    @snumarcus
+                    </p>
+                    <i class="i far fa-bookmark"></i>&nbsp
+                    <i class="i far fa-envelope"></i>&nbsp
+                    <i class="i fab fa-whatsapp"></i>&nbsp
+                    <i class="i fas fa-sms"></i>
+                </div>
+            </div>
+
+        </div>
+        <hr>
+        <div class="article-description">
+            <p class="article-text">
+            <span id="start-letter">G</span>ourmands who have dined at Singapore’s Michelin-starred Chinese restaurants, or at its popular Chinese food chains, are likely to have tasted Kwong Cheong Thye’s (KCT) soya sauce.
+            <br><br>
+            According to the company, its signature soya sauces are used by more than 90 per cent of the top hotels and restaurants in the country, including the likes of Summer Palace, Peach Blossoms, Crystal Jade, Putien and more. Its products are also distributed globally, with China and Dubai being its two biggest overseas markets.
+            <br><br>
+            It is an achievement that its fifth-generation co-owner, 28-year-old Alvin Choo, doesn’t take lightly. Soya sauce, he believes, is the “soul of a dish”. “Although it’s not the main star, it’s a very important ingredient that complements a dish. We have to keep giving our best,” he said.
+            <br><br>
+            Over the course of 130 years, Choo’s family has perfected its soya sauce recipe. But the young boss is determined not to let the company rest on its laurels, and is constantly looking for ways to innovate.
+            </p>
+
+            <div class="related-topics">
+                <div>
+                    <h4>MORE ON THIS TOPIC:</h4><hr>
+                </div>
+                <div class="rl-topic">
+                    <img src="images/sushi-with-sauce.jpg">
+                    <h4>SINGAPORE CHEFS REVEAL THE SECRETS OF A GOOD SOYA SAUCE AND HOW THEY USE IT IN THEIR DISHES</h4>
+                </div>
+                <hr>
+                <div class="rl-topic">
+                    <img src="images/shirley-chia-mu-artisan-soy-sauce-brewer-hero.jpg">
+                    <h4>MEET THE THIRD GENERATION MALAYSIAN SOY SAUCE BREWER WHO STARTED HER OWN ARTISAN LABEL</h4>
+                </div>
+            </div>
+            <br>
+            <h3>FERMENTING A LEGACY</h3>
+            <br>
+            <p class="article-text">
+            KCT’s roots date all the way back to 1892, when its founder Choo Cheong Chan left China for Singapore. He set up the first Kwong Cheong Thye site in Jalan Sultan, manufacturing soya sauce for food suppliers.
+            <br><br>
+            The business has since expanded into manufacturing chilli sauce, sesame oil, oyster sauce and more. Its product range also includes noodles, dim sum skin, mooncakes and food pastes such as chilli crab, laksa and Hainanese chicken rice.
+            <br><br>
+            Choo, the second child of three siblings, has fond memories of helping out with the family business in his younger days. “In primary school, we would come to the warehouse to help pick up stocks. That was a good experience because we got to learn more about the products we have,” he recalled.
+            <br><br>
+            Choo would also visit the family’s retail shop in Geylang, serving customers and “helping aunties bring their goods to their cars”. Tagging along with his parents to trade shows overseas were also par for the course. Then there were family dinners at their customers’ restaurants, where he learnt the importance of maintaining relationships and listening to feedback from chefs.</p>
+            <br>
+            <div id="photo-and-quote">
+                <div>
+                    <img src="images/alvin_choo_kwong_cheong_thye_soya_sauce_part_2.jfif" width="100%" height=auto>
+                    <h6>It was filial piety that drove Choo to join his family business full-time.</h6>
+                </div>
+                <div id="quote">
+                    <h1>“I saw that my parents weren’t getting any younger and they would have to keep working until we decided to take over the business.”</h1>
+                </div>
+            </div>
+            <br><hr>
+            <p class="article-text">
+            His parents, meanwhile, encouraged him to explore his passions outside the business. In his schooling years, Choo took up various internships, including working as a PA at a production house and doing marketing at a radio station.
+            <br><br>
+            It was filial piety that eventually drove him back to the family business. “I saw that my parents weren’t getting any younger and they would have to keep working until we decided to take over the business,” he said. It helped too, that Choo has always had a passion for food, he laughingly confessed.  
+            <br><br>
+            Choo formally joined the family business straight after completing his National Service (NS). His older sister helms the administration department, while his younger brother looks after operations. Choo, on the other hand, takes care of product development and marketing.
+            <br><br>
+            Naturally, stepping into a heritage business, Choo had to earn his stripes. He started out by learning about the process of making soya sauce – “there’s a batch of KCT soya sauce made by me” – and spending long hours shadowing the company’s general manager.
+            <br><br>
+            “I sat with her in her office for a good five to six months, just looking at how she works from day to day,” Choo recalled. At the same time, he took notes of what the company could improve on. “I wouldn’t say anything was wrong. Everything worked in the past, but how could we make things better, easier and more efficient?”
+            </p>
+
+            <div class="related-topics">
+                <div>
+                    <h4>MORE ON THIS TOPIC:</h4><hr>
+                </div>
+                <div class="rl-topic">
+                    <img src="images/tien-yuan-woon-killiney-hero.jpg">
+                    <h4>MEET THE MILLENNIAL LEADING SINGAPORE ICON KILLINEY KOPITIAM INTO THE FUTURE</h4>
+                </div>
+            </div>
+            <br>
+            <h3>FAMILY TIES</h3>
+            <br>
+            <p class="article-text">
+            Choo calls it an “honour and pleasure” to be at the helm of a 130-year-old heritage company. “My parents, and the earlier Choo generations, created a very good business for us. It’s stressful because we are a relatively big business and we are growing. We don't want to fail by doing too much, but what my siblings and I are doing is helping the company move forward so that we are not stuck in the past. That’s how companies die off, when they hit a plateau and don’t do anything about it,” he said.
+            <br><br>
+            To decompress from work, Choo enjoys cooking, photography and spending time with his wife and two-year-old daughter. Learning about the fermentation of soya sauce has also led him to develop an interest in other forms of natural fermentation, such as wine and kombucha.
+            <br><br>
+            Pressure may be inevitable when leading a historic business, but Choo need only draw inspiration from the name of his family’s business to be reminded of its mission and purpose. While it was common for entrepreneurs in the 1800s to name their businesses after their family name, KCT’s Chinese name – “Guang Xiang Tai” – is derived from Mandarin phrases that mean vast (“guang da”), prosperity (“ji xiang ru yi”) and stability (“wen ru tai shan”). The latter holds the most meaning for Choo.
+            <br><br>
+            “Different generations will have different perspectives as to what stability means. To my great-great-grandfather, stability meant to have a good, solid business, just making soya sauce. But for our generation, we believe stability is achieved through innovation. We have to grow the business in order to be stable,” he mused.
+            <br><br>
+            And when it comes to succession plans, “we wish [for the company] to always stay in the family, but we are always open to anything”, Choo shared. “The most important thing is that the legacy of KCT goes on. If it’s someone in the family [leading it], then that’s better. That way, we’ll always have a Choo at the helm."
+            </p>
+            <div id="photo-and-quote">
+                <div>
+                    <img src="images/soya-sauce.jpg" width="100%" height=auto>
+                    <h6>(Photo:Marcus Tan Lai He)</h6>
+                </div>
+                <div id="quote-2">
+                    <h1>"Different generations will have different perspectives as to what stability means. But for our generation, we believe stability is achieved through innovation."</h1>
+                </div>
+            </div>
+        </div>
+    </div>   
+</body>
+<hr> 
+<!--The footer of the webpage-->
+<footer>
+    <div class="footer-section">
+        <div class="row">
+            <div class="col-md-3" id="snu-subscribe">
+                <br>
+                <img id="news-paywall" src="advertisements/news-paywall.jpg">
+                <h4>Subscribe Today</h4>
+                <p>Enjoy unlimited access to exclusive stories and analyses by the SNU Media Group</p>
+                <div class="subscribe-box">
+                    <form action="#">
+                        <div class="form-box">
+                            <input type="text" name="EmailAddress" placeholder="Enter your email">
+                            <button type="submit"> Subscribe</button>
+                        </div> 
+                    </form>
+                </div><br>
+            </div>
+            
+            <div class="col-md-3" id="snu-sections">
+                
+                <ul>
+                    <li class="snu-sections">Asia</li>
+                    <li class="snu-sections">World</li>
+                    <li class="snu-sections">Singapore</li>
+                    <li class="snu-sections">Lifestyle</li>
+                    <li class="snu-sections">Business</li>
+                    <li class="snu-sections">Opinion</li>
+                
+                </ul>
+             
+                <ul>
+                    <li class="snu-sections">Technology</li>
+                    <li class="snu-sections">Multimedia</li>
+                    <li class="snu-sections">Sport</li>
+                    <li class="snu-sections">Videos</li>
+                    <li class="snu-sections">Podcasts</li>
+                
+                </ul>
+              
+            </div>
+                
+            
+            <div class="col-md-3" id="about-snu">
+            <ul>
+                <p class="about-snu">About Us</p>
+                <p class="about-snu">Contact Us</p>
+                <p class="about-snu">Terms & Conditions</p>
+                <p class="about-snu">Data Protection Policy</p>
+                <p class="about-snu">Need help? Reach us here.</p>
+                <p class="about-snu">Advertise with us</p>
+                </ul>
+            </div>
+
+            
+            <div class="col-md-3" id="snu-follow">
+                <div class="container text-center">
+                    <div class="row row-cols-2">
+                        <div class="col">
+                            <p class="snu-follow"><i class="i fas fa-file-pdf"></i> e-PDF </p>
+                            <hr>
+                        </div>
+                        <div class="col">
+                            <p class="snu-follow"><i class="i fab fa-instagram"></i> Instagram </p>
+                            <hr>
+                        </div>
+                        <div class="col">
+                            <p class="snu-follow"><i class="i fab fa-twitter"></i> Twitter</p>
+                            <hr>
+                        </div>
+                        <div class="col">
+                            <p class="snu-follow"><i class="i fab fa-facebook-f"></i> Facebook</p>
+                            <hr>
+                        </div>
+                        <div class="col">
+                            <p class="snu-follow"><i class="i fab fa-youtube"></i> Youtube</p>
+                            <hr>
+                        </div>
+                        <div class="col">
+                            <p class="snu-follow"><i class="i fas fa-podcast"></i> Podcasts</p>
+                            <hr>
+                        </div>
+                        <div class="col">
+                            <p class="snu-follow"><i class="i fab fa-telegram"></i> Telegram</p>
+                            <hr>
+                        </div>
+                        <div class="col">
+                            <p class="snu-follow"><i class="i fab fa-linkedin"></i> LinkedIn</p>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="go-back-top">
+                    <a href="snu-lifestyle.html">BACK TO TOP 
+                        <i class="i fas fa-arrow-alt-circle-up"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+   <!--The copyright statement at the bottom of the footer-->
+    <hr>
+    <div class="copyright">
+        <h6>Copyright© SNU Media 2022. SNU Entertainment Pte Ltd. All rights reserved</h6>
+    </div>
+</footer>
+</html>

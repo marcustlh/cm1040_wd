@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <title>SNU Times - Breaking News,Singapore, world news etc. </title>
+    <meta charset="utf-8">
+    <!--Bootstrap 5.2.0 CSS and Javascript Plug-ins-->
+    <link rel="stylesheet" href ="bootstrap-5.2.0-dist/bootstrap-5.2.0-dist/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="bootstrap-5.2.0-dist/bootstrap-5.2.0-dist/js/bootstrap.min.js"></script>
+   
+    <!-- These are the external stylesheets of SNU Times -->
+    <link rel="stylesheet" href="snutimes-common.css"/>
+    <link rel="stylesheet" href="snu-business.css"/>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+</head>
+<body>
+    <hr>
+    <!--Search page overlay-->
+    <div id="search-page-Overlay" class="overlay">
+        <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+        <div class="overlay-content">
+            <form action="#">
+              <input type="text" placeholder="Search.." name="search">
+              <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+            
+            <br><br><br>
+            <div class="recent-searches-and-topics">
+                <div id="recent-searches">
+                    <h3>Recent Searches <button><h5>Clear X</h5></button></h3>
+                    <hr>
+                    <h5>'High-severity vulnerability' found in Google Chrome browser, SingCERT advises users to install updates</h5>
+                    <h5>Life after Inside Maximum Security for two inmates: No longer behind bars, but it’s no bed of roses</h5>
+                    <h5>Parasite: What the Oscar win means for Korean cinema</h5>
+                </div>
+                <br>
+                <div id="related-topics">
+                    <h3>Related Topics:</h3>
+                    <hr>
+                    <div class="container">
+                    <div class="row">
+                        <div class="col"><input type="button" value="COVID-19"></div>
+                        <div class="col"><input type="button" value="Malaysia"></div>
+                        <div class="col"><input type="button" value="Omnicron"></div>
+                        <div class="col"><input type="button" value="Ukraine Invasion"></div>
+                        <div class="col"><input type="button" value="climate change"></div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Navigation bar of the website-->
+    <div class="news-navbar">
+        <div class="row" id="news-navbar">
+            <div class="col-md"><a href="index.html">S N U</a></div>
+            <div class="col-md"><a href="snu-top-stories.html">Top Stories</a></div>
+            <div class="col-md"><a href="snu-singapore.html">Singapore</a></div>
+            <div class="col-md"><a href="snu-asia.html">Asia</a></div>
+            <div class="col-md">World</div>
+            <div class="col-md"><a href="snu-lifestyle.html">Lifestyle</a></div>
+            <div class="col-md" id="highlight">Business</div>
+            <div class="col-md"><i class="i fas fa-user-alt"></i> Log In</div>
+            <div class="col-md">Subscribe</div>
+            <div class="col-md">   
+                <i class="i fas fa-search" class="openBtn" onclick="openSearch()">
+                </i>
+            </div>
+            <div class="col-md" class="dropdown">
+                <button class="dropbtn" onclick="myFunction()"><i class="i fas fa-list"></i></button>
+                <div class="dropdown-content" id="myDropdown">
+                <a href="snu-top-stories.html">Top Stories</a>
+                <a href="snu-asia.html">Asia</a>
+                <a href="#">World</a>
+                <a href="snu-lifestyle.html">Lifestyle</a>
+                <a href="snu-business.html">Business</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <!--Javascript functions of the website-->
+    <script>
+        /* When the user clicks on the search icon*/
+        function openSearch() 
+        {
+            document.getElementById("search-page-Overlay").style.display = "block";
+        }
+        
+        /* When the use is at the search page overlay and clicks on the close icon*/
+        function closeSearch() 
+        {
+            document.getElementById("search-page-Overlay").style.display = "none";
+        }
+        
+        /* When the user clicks on the menu button, toggle between hiding and showing the dropdown content */
+        function myFunction() 
+        {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        /* Close the dropdown content of the menu if the user clicks outside of it*/
+        window.onclick = function(e) 
+        {
+            if (!e.target.matches('.dropbtn')) 
+            {
+                var myDropdown = document.getElementById("myDropdown");
+                if (myDropdown.classList.contains('show')) 
+                {
+                    myDropdown.classList.remove('show');
+                }
+            }
+        }
+    </script>
+    
+    <div class="website-layout">
+        <div class="popup">
+            <hr>
+            <div class="biz-related-topics">
+                <div id="brl-topic">
+                    <img id="img" src="images/ford-rim.jpg">
+                    <div id="brl-description">
+                        <h4>Ford cuts 3,000 jobs as it pivots to EVs, software</h4>
+                        <p>1 hour ago</p>
+                    </div>
+                </div>
+                <div id="brl-topic">
+                    <img id="img" src="images/china-coal.jpg">
+                    <div id="brl-description">
+                        <h4>China no closer to peak coal despite record renewable capacity additions</h4>
+                        <p>9 hours ago</p>
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </div>
+        <div class="article-heading">
+            <h6 id="section-resp">Business</h6>
+            <h1>'High-severity vulnerability' found in Google Chrome browser, SingCERT advises users to install updates</h1>
+        </div>
+        <div id="photo-and-credits">
+            <img id="img" src="images/iStock-google-chrome.jpg">
+            <div id="credits">
+                <p><i class="i fas fa-user-alt"></i> Marcus Tan Lai He</p>
+                <p>@snumarcus</p>
+                <i class="i far fa-bookmark"></i>&nbsp
+                <i class="i far fa-envelope"></i>&nbsp
+                <i class="i fab fa-whatsapp"></i>&nbsp
+                <i class="i fas fa-sms"></i>
+            </div>
+        </div>
+        <hr>
+        <div class="article-description">
+            <p class="article-text">
+            Google Chrome users should install the latest security updates immediately, following reports that hackers are exploiting a "high-severity vulnerability" flaw, the Singapore Computer Emergency Response Team (SingCERT) said on Friday (Aug 19).
+            <br><br>
+            Google did not provide further information, but released Chrome 104.0.5112.101 for Mac and Linux, and Chrome 104.0.5112.102/101 for Windows to address multiple vulnerabilities.
+            <br><br>
+            The high-severity vulnerability is "being exploited in the wild", or active and can be found in devices belonging to ordinary users.
+            <br><br>
+            The security fix for this bug is included in an update currently being rolled out, and users who have automatic updates turned on are expected to receive it in the coming days or weeks, according to technology website Bleeping Computer.
+            <br><br>
+            SingCERT has advised Google Chrome users on Windows, Mac and Linux computers to install the latest security updates immediately.
+            <br><br>
+            They are also encouraged to enable the automatic update function in Chrome to ensure that their software is updated promptly.
+            <br><br>
+            The vulnerability is a high-severity security issue linked to "Intents” - a feature that enables launching applications and web services directly from a web page, Bleeping Computer reported.
+            <br><br>
+            The vulnerability was reported on Jul 19 by Ashley Shen and Christian Resell of the Google Threat Analyst Group.
+            <br><br>
+            Google said it was aware that an exploit for the bug exists in the wild, but may restrict access to bug details and links until a majority of users are updated with a fix. 
+            <br><br>
+            "We will also retain restrictions if the bug exists in a third party library that other projects similarly depend on, but haven't yet fixed," it added.   
+            </p>
+        </div>
+    </div>
+</body>
+<hr>
+<!--The footer of the webpage-->
+<footer>
+    <div class="footer-section">
+        <div class="row">
+            <div class="col-md-3" id="snu-subscribe">
+                <br>
+                <img id="news-paywall" src="advertisements/news-paywall.jpg">
+                <h4>Subscribe Today</h4>
+                <p>Enjoy unlimited access to exclusive stories and analyses by the SNU Media Group</p>
+                <div class="subscribe-box">
+                    <form action="#">
+                        <div class="form-box">
+                            <input type="text" name="EmailAddress" placeholder="Enter your email">
+                            <button type="submit"> Subscribe</button>
+                        </div> 
+                    </form>
+                </div><br>
+            </div>
+            
+            <div class="col-md-3" id="snu-sections">
+                
+                <ul>
+                    <li class="snu-sections">Asia</li>
+                    <li class="snu-sections">World</li>
+                    <li class="snu-sections">Singapore</li>
+                    <li class="snu-sections">Lifestyle</li>
+                    <li class="snu-sections">Business</li>
+                    <li class="snu-sections">Opinion</li>
+                
+                </ul>
+             
+                <ul>
+                    <li class="snu-sections">Technology</li>
+                    <li class="snu-sections">Multimedia</li>
+                    <li class="snu-sections">Sport</li>
+                    <li class="snu-sections">Videos</li>
+                    <li class="snu-sections">Podcasts</li>
+                
+                </ul>
+              
+            </div>
+                
+            
+            <div class="col-md-3" id="about-snu">
+            <ul>
+                <p class="about-snu">About Us</p>
+                <p class="about-snu">Contact Us</p>
+                <p class="about-snu">Terms & Conditions</p>
+                <p class="about-snu">Data Protection Policy</p>
+                <p class="about-snu">Need help? Reach us here.</p>
+                <p class="about-snu">Advertise with us</p>
+                </ul>
+            </div>
+
+            
+            <div class="col-md-3" id="snu-follow">
+                <div class="container text-center">
+                    <div class="row row-cols-2">
+                        <div class="col">
+                            <p class="snu-follow"><i class="i fas fa-file-pdf"></i> e-PDF </p>
+                            <hr>
+                        </div>
+                        <div class="col">
+                            <p class="snu-follow"><i class="i fab fa-instagram"></i> Instagram </p>
+                            <hr>
+                        </div>
+                        <div class="col">
+                            <p class="snu-follow"><i class="i fab fa-twitter"></i> Twitter</p>
+                            <hr>
+                        </div>
+                        <div class="col">
+                            <p class="snu-follow"><i class="i fab fa-facebook-f"></i> Facebook</p>
+                            <hr>
+                        </div>
+                        <div class="col">
+                            <p class="snu-follow"><i class="i fab fa-youtube"></i> Youtube</p>
+                            <hr>
+                        </div>
+                        <div class="col">
+                            <p class="snu-follow"><i class="i fas fa-podcast"></i> Podcasts</p>
+                            <hr>
+                        </div>
+                        <div class="col">
+                            <p class="snu-follow"><i class="i fab fa-telegram"></i> Telegram</p>
+                            <hr>
+                        </div>
+                        <div class="col">
+                            <p class="snu-follow"><i class="i fab fa-linkedin"></i> LinkedIn</p>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="go-back-top">
+                    <a href="snu-business.html">BACK TO TOP 
+                        <i class="i fas fa-arrow-alt-circle-up"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--The copyright statement at the bottom of the footer-->
+    <hr>
+    <div class="copyright">
+        <h6>Copyright© SNU Media 2022. SNU Entertainment Pte Ltd. All rights reserved</h6>
+    </div>
+</footer>
+</html>

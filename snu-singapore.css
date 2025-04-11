@@ -1,0 +1,130 @@
+/*This is to style the heading of the "Singapore" article*/
+.article-heading
+{
+    text-align: center;
+    margin-left:150px;
+    margin-right: 150px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+/*This is to style the photo anc credits of the "Singapore" article*/
+#photo-and-credits
+{
+    display:grid;
+    grid: auto/2fr 1fr;
+    margin-left:150px;
+    margin-right: 150px;
+}
+#family-photo
+{
+    border-radius: 30px;
+}
+.credits-and-ads
+{
+    margin-left: 50px;
+    margin-top: 30px;
+}
+#credits
+{
+    font-size:calc(16px + 0.390625vw);
+}
+p
+{
+    margin: auto;
+}
+
+.article-description
+{
+    margin-left:150px;
+    margin-right: 150px;
+    
+}
+
+/*This is to style the article text and the "Related Topics" section of the "Singapore" article*/
+.article-text , #related-stuff
+{
+    text-align: left;
+    font-size:calc(16px + 0.390625vw);
+    font-weight: 100;
+    font-family: Segoe UI,sans-serif;
+}
+#related-stuff
+{
+    padding-left: 30px;
+}
+#related-article-1 , #related-article-2
+{
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+    grid-column-gap: 20px;
+    font-size:calc(10px + 0.390625vw);
+    font-weight: 600;
+}
+
+/*Media Queries*/
+
+/*Iphone 6,6s,7and 8*/
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px)
+{
+    .dropbtn
+    {
+        font-size: calc(10px + 0.390625vw);
+        padding: 3px 10px;
+        position: absolute;
+        bottom: 30px;
+    }
+    
+    .article-heading , #photo-and-credits , .article-description
+    {
+        margin-left: 75px;
+        margin-right: 75px;
+    }
+    
+}
+
+/*Ipad 3,4 and Pro 9*/
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+{
+    .dropbtn
+    {
+        font-size: calc(10px + 0.390625vw);
+        padding: 3px 10px;
+        position: absolute;
+        bottom: 30px;
+    }
+    .article-heading , #photo-and-credits , .article-description
+    {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+}
+
+/*Non-Retina Screens*/
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+{
+    .dropbtn
+    {
+        font-size: calc(10px + 0.390625vw);
+        padding: 3px 10px;
+        position: relative;
+        top: 2px;
+    }
+    
+    .dropdown-content
+    {
+        top: 55px;
+    }
+    
+    .article-heading , #photo-and-credits , .article-description
+    {
+        margin-left: 50px;
+        margin-right: 50px;
+    }    
+}

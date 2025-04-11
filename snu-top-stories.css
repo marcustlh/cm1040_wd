@@ -1,0 +1,142 @@
+/*This is to style the "Parasite" article layout */
+#article-layout
+{
+    padding-left: 75px;
+    padding-right: 75px;
+}
+
+/*This is to style the headline of the "Parasite" article*/
+#parasite-headline
+{
+    font-size: calc(40px + 0.390625vw);
+    font-family: Lucida Sans,sans-serif;
+}
+
+/*This is to style the credits of the "Parasite" article*/
+#credits p 
+{
+    margin: auto;
+    font-size: calc(12px + 0.390625vw);
+}
+
+/*This is to style the "Parasite" article text*/
+.article-text
+{
+    font-family: Lucida Sans , sans-serif;
+    font-size: calc(14px + 0.390625vw);
+}
+
+/*This is to highlight certain words in the article text*/
+.article-text span
+{
+    font-weight: 600;
+}
+
+/*This is to style the "Register for SNU Account" section*/
+.register-snu
+{
+    display: grid;
+    grid: auto/3fr 1fr;
+    padding: 10px;
+    background-color: #CECECE;
+    
+}
+.register-snu button
+{
+    margin: 20px;
+    background-color: #4769d8;
+}
+
+
+/*This is to style the right side of the article page (Top Stories, Features, More-On etc.)*/
+#related-stuff
+{
+    padding-top: 50px;
+}
+
+#related-stuff hr
+{
+    margin: auto;
+}
+.top-stories , #feature-headline
+{
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #EFEFEF;
+}
+.more-on
+{
+    background-color: #EFEFEF;
+    padding:10px;
+}
+.most-read
+{
+    display: grid;
+    grid: auto/1fr 4fr;
+    background-color: #EFEFEF;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.most-read span
+{
+    font-size: calc(42px + 0.390625vw);
+}
+
+
+/* Media Queries*/
+
+/*Iphone 6,6s,7and 8*/
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px)
+{
+    .dropbtn
+    {
+        font-size: calc(10px + 0.390625vw);
+        padding: 3px 10px;
+        position: absolute;
+        bottom: 30px;
+    }
+    
+    iframe
+    {
+        height: 350px;
+    }
+}
+
+/*Ipad 3,4 and Pro 9*/
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+{
+    .dropbtn
+    {
+        font-size: calc(10px + 0.390625vw);
+        padding: 3px 10px;
+        position: absolute;
+        bottom: 30px;
+    }
+    
+    iframe
+    {
+        height: 375px;
+    }
+}
+
+/*Non-Retina Screens*/
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+{
+    .dropbtn
+    {
+        font-size: calc(10px + 0.390625vw);
+        padding: 3px 10px;
+        position: relative;
+        top: 2px;
+    }
+    iframe
+    {
+        height: 450px;
+    }
+}

@@ -1,0 +1,532 @@
+/*This is to style the title and slogan of the news website*/
+.news-title
+{
+    text-align: center;
+}
+#heading
+{
+    font-size: calc(56px + 0.390625vw);
+    font-family: Copperplate Gothic Light;
+    font-weight: 600;
+    margin: auto;
+}
+#slogan
+{
+    font-size: calc(15px + 0.390625vw);
+    font-family: Copperplate Gothic Light;
+    margin: auto;
+}
+
+/*This is to style the different news sections of the website*/
+.top-stories-grid , .sg-section-grid , .asia-section-grid 
+{
+    display:grid;
+    grid: auto/2fr 5fr 2fr;
+    grid-column-gap: 40px;
+    grid-template-rows: auto;
+}
+
+/*This is to style the icons at the left side of the webpage*/
+.socials
+{
+    padding: 10px;
+    font-size:calc(12px + 0.390625vw);
+    font-weight: 100;
+    font-family: Segoe UI,sans-serif;
+}
+
+/*This is to style the section headings of the website*/
+#section-heading
+{
+    font-size: calc(32px + 0.390625vw);
+}
+
+/*This is to style the "Sign Up" box at the left side of the website*/
+.signup-box
+{
+    display:flex;
+}
+#signup-box
+{
+    padding: 5px 5px;
+    border-radius: 5px;
+    background: #ececec;
+}
+#signup-box input
+{
+    font-size: calc(8px + 0.390625vw);
+    color: black;
+    border: none;
+    outline: none;
+    background: #ececec;
+}
+#signup-box button
+{
+    color:#fff;
+    padding: 20px 20px;
+    font-size: calc(8px + 0.390625vw);
+    border: none;
+    border-radius: 5px;
+    background: #4769d8;
+    cursor: pointer;
+    transition: .5s;
+}
+button:hover
+{
+    background: #2e54d3;
+}
+
+/*Top Stories Stylesheet*/
+.breaking-news
+{
+    display:grid;
+    grid-template-columns: 2fr 5fr;
+}
+.breaking-news, #smaller-news-grid
+{
+    border-left: 1px dotted rgba(156,156,156);
+    border-right: 1px dotted rgba(156,156,156);
+    padding:10px;
+}
+#top-news hr
+{
+    width: auto;
+}
+#smaller-news-grid
+{
+    display:grid;
+    grid: auto/ 1fr 1fr;
+    grid-column-gap: 20px;
+}
+
+#advertisement-main
+{
+    width:auto;
+}
+
+
+/*This is to style all images in the website */
+#img , #asia-img
+{
+    border-radius: 20px;
+    width: 100%;
+    height: auto;
+}
+
+/*This is to style the short description of the main articles*/
+.short-description
+{
+    font-size: calc(11px + 0.390625vw);
+    font-family:Comic Sans,sans-serif;
+}
+
+
+
+/* Asia Section Stylesheet*/ 
+.asia-top-article
+{
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+}
+#top-asia-headline
+{
+    padding-right: 10px;
+}
+.mini-asia-headlines
+{
+    display: grid;
+    grid: auto/ 1fr 1fr 1fr 1fr;
+}
+.asia-top-article , .mini-asia-headlines
+{
+    border-left: 1px dotted rgba(156,156,156);
+    border-right: 1px dotted rgba(156,156,156);
+    padding:10px;
+}
+.mini-asia-headlines h5
+{
+    margin:10px;
+}
+span
+{
+    border-right: 1px dotted rgba(156,156,156);
+}
+
+/* Views and Opinions Stylesheet*/
+
+.views-and-opinions
+{
+    display: grid;
+    grid:auto/ 3fr 7fr;
+}
+.views
+{
+    display:grid;
+    grid-template-columns: 2fr 5fr;
+    padding-right: 15px;
+    border-right: 1px dotted rgba(156,156,156);
+}
+.main-views
+{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+#curtain-img
+{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#curtain-preview
+{
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 15px;
+    border-left: 1px dotted rgba(156,156,156);
+}
+
+
+/* Lifestyle Section Stylesheet*/
+.lifestyle-grid
+{
+    display: grid;
+    grid: auto/5.5fr 3.25fr;
+}
+.lifestyle
+{
+    border-right: 1px dotted rgba(156,156,156);
+    padding: 40px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+.lifestyle h3
+{
+    text-align: center;
+}
+#small-lifestyle
+{
+    display:grid;
+    grid:auto/1fr 1fr;
+}
+#small-lifestyle-sect
+{
+    padding:20px;
+    border-right: 1px dotted rgba(156,156,156);
+}
+#small-lifestyle span
+{
+    border-bottom: 1px dotted rgba(156,156,156);
+}
+#small-lifestyle h5
+{
+    text-align: center;
+    padding-left:15px;
+    padding-right:15px;
+}
+
+/* Business Section Stylesheet*/
+.business-grid
+{
+    display: grid;
+    grid:auto/3fr 7fr;
+}
+#biz-top-news
+{
+    display: grid;
+    grid: auto/3fr 2fr;
+    grid-column-gap: 10px;
+    padding: 10px;
+    border-right: 1px dotted rgba(156,156,156);
+}
+#mini-biz-headlines
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+#mini-biz-headlines h5
+{
+    padding:10px;
+    border-right: 1px dotted rgba(156,156,156);
+}
+.biz-section-2
+{
+    display: grid;
+    grid: auto/2fr 1fr;
+    padding-left: 20px;
+    grid-column-gap: 20px;
+}
+#biz-breaking-headline
+{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-column-gap: 10px;
+}
+
+/*Media Queries*/
+
+/*Iphone 6,6s,7and 8*/
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px)
+{
+    #signup-box button
+    {
+        padding: 5px 5px;
+        position: absolute;
+        
+    }
+    .breaking-news
+    {
+        display: inline-block;
+    }
+    
+    #smaller-news-grid h3 , .headlines h4 
+    {
+        font-size: calc(15px + 0.390625vw);
+    }
+    
+    .sg-news-subheadings h4 , .sg-small-headlines h4
+    {
+        font-size: calc(15px + 0.390625vw);
+    }
+    
+    .asia-section-grid
+    {
+        display:grid;
+        grid: auto/0fr 3fr 1fr;
+        grid-column-gap: 0px;
+    }
+    
+    #top-asia-headline h3
+    {
+        font-size: calc(18px + 0.390625vw);
+    }
+    
+    .mini-asia-headlines h5
+    {
+        font-size: calc(12px + 0.390625vw);
+    }
+    
+    .asia-news-subheadings
+    {
+        padding-left: 10px;
+    }
+    .asia-news-subheadings h4
+    {
+        font-size: calc(14px + 0.390625vw);
+    }
+    
+    .views-and-opinions
+    {
+        display: grid;
+        grid: auto/ 2fr 3fr;
+    }
+    
+    .main-views
+    {
+        display: block;
+    }
+    
+    #curtain-img
+    {
+        display: none;
+    }
+
+    .lifestyle-grid
+    {
+        display: inline;
+    }
+    
+    .business-grid
+    {
+        display: grid;
+        grid: auto/1fr 1fr;
+    }
+    
+    #ketchup-ad
+    {
+        display: none;
+    }
+    
+    #biz-breaking-headline
+    {
+        display: inline;
+    }
+    
+    .biz-section-2
+    {
+        display: inline;
+    }
+    
+    .biz-section-2 h4
+    {
+        font-size: calc(20px + 0.390625vw);
+    }
+}
+
+/*Ipad 3,4 and Pro 9*/
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+{
+    #signup-box button
+    {
+        padding: 5px 5px;
+        position: absolute;
+        
+    }
+    
+    .breaking-news
+    {
+        display: block;
+    }
+    
+    #smaller-news-grid h3 , .headlines h4 
+    {
+        font-size: calc(16px + 0.390625vw);
+    } 
+    
+    .sg-news-subheadings h4 , .sg-small-headlines h4
+    {
+        font-size: calc(14px + 0.390625vw);
+    }
+    
+    .asia-section-grid
+    {
+        display:grid;
+        grid: auto/0fr 3fr 1fr;
+        grid-column-gap: 0px;
+    }
+    
+    #top-asia-headline h3
+    {
+        font-size: calc(18px + 0.390625vw);
+    }
+    
+    .mini-asia-headlines h5
+    {
+        font-size: calc(14px + 0.390625vw);
+    }
+    
+    .asia-news-subheadings
+    {
+        padding-left: 10px;
+    }
+    .asia-news-subheadings h4
+    {
+        font-size: calc(14px + 0.390625vw);
+    }
+    
+    .main-views
+    {
+        display: inline-block;
+    }
+    
+    #curtain-opinions
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    #small-lifestyle-sect h5
+    {
+        height: 100px;
+        overflow: scroll;
+    }
+    
+    #biz-top-news
+    {
+        display: block;
+    }
+    
+    .biz-section-2
+    {
+        display: block;
+    }
+    
+    #ketchup-ad , #biz-top-news img
+    {
+        display: none;
+    }
+}
+
+/*Non-Retina Screens*/
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+{
+    #signup-box button
+    {
+        padding: 5px 5px;
+        position: absolute;
+        
+    }
+    .breaking-news h2
+    {
+        font-size: calc(18px + 0.390625vw);
+    }
+    
+    #smaller-news-grid h3 , .headlines h4 
+    {
+        font-size: calc(16px + 0.390625vw);
+    } 
+    
+    .sg-news-subheadings h4 , .sg-small-headlines h4
+    {
+        font-size: calc(16px + 0.390625vw);
+    }
+    
+    .asia-top-article
+    {
+        display: block;
+        padding: 30px;
+        padding-bottom: 10px;
+        padding-top: 0px;
+    }
+    
+    .mini-asia-headlines h5
+    {
+        font-size: calc(14px + 0.390625vw);
+    }
+    
+    .views-and-opinions h3
+    {
+        font-size: calc(18px + 0.390625vw);
+    }
+    
+    .main-views
+    {
+        display:grid;
+    }
+    
+    #curtain-img img
+    {
+        width: 100%;
+        height: auto;
+    }
+
+    #small-lifestyle-sect h5
+    {
+        height: 75px;
+        overflow: auto;
+    }
+    
+    #biz-top-news h4
+    {
+        font-size: calc(16px + 0.390625vw);
+    }
+    
+    
+    #mini-biz-headlines h5
+    {
+        font-size: calc(14px + 0.390625vw);
+        height: 100px;
+        overflow: auto;
+    }
+    
+    #biz-breaking-headline h4
+    {
+        font-size: calc(20px + 0.390625vw);    ;
+    }
+}
+
+

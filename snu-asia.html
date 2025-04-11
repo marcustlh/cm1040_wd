@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <title>SNU Times - Breaking News,Singapore, world news etc. </title>
+    <meta charset="utf-8">
+    <!--Bootstrap 5.2.0 CSS and Javascript Plug-ins-->
+    <link rel="stylesheet" href ="bootstrap-5.2.0-dist/bootstrap-5.2.0-dist/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="bootstrap-5.2.0-dist/bootstrap-5.2.0-dist/js/bootstrap.min.js"></script>
+   
+    <!-- These are the external stylesheets of SNU Times -->
+    <link rel="stylesheet" href="snutimes-common.css"/>
+    <link rel="stylesheet" href="snu-asia.css"/>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+</head>
+<body>
+    <hr>
+    <!--Search page overlay-->
+    <div id="search-page-Overlay" class="overlay">
+        <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+        <div class="overlay-content">
+            <form action="#">
+              <input type="text" placeholder="Search.." name="search">
+              <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+            
+            <br><br><br>
+            <div class="recent-searches-and-topics">
+                <div id="recent-searches">
+                    <h3>Recent Searches <button><h5>Clear X</h5></button></h3>
+                    <hr>
+                    <h5>'High-severity vulnerability' found in Google Chrome browser, SingCERT advises users to install updates</h5>
+                    <h5>Life after Inside Maximum Security for two inmates: No longer behind bars, but it’s no bed of roses</h5>
+                    <h5>Parasite: What the Oscar win means for Korean cinema</h5>
+                </div>
+                <br>
+                <div id="related-topics">
+                    <h3>Related Topics:</h3>
+                    <hr>
+                    <div class="container">
+                    <div class="row">
+                        <div class="col"><input type="button" value="COVID-19"></div>
+                        <div class="col"><input type="button" value="Malaysia"></div>
+                        <div class="col"><input type="button" value="Omnicron"></div>
+                        <div class="col"><input type="button" value="Ukraine Invasion"></div>
+                        <div class="col"><input type="button" value="climate change"></div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Navigation bar of the website-->
+    <div class="news-navbar">
+        <div class="row" id="news-navbar">
+            <div class="col-md"><a href="index.html">S N U</a></div>
+            <div class="col-md">Top Stories</div>
+            <div class="col-md"><a href="snu-singapore.html">Singapore</a></div>
+            <div class="col-md" id="highlight">Asia</div>
+            <div class="col-md">World</div>
+            <div class="col-md"><a href="snu-lifestyle.html">Lifestyle</a></div>
+            <div class="col-md"><a href="snu-business.html">Business</a></div>
+            <div class="col-md"><i class="i fas fa-user-alt"></i> Log In</div>
+            <div class="col-md">Subscribe</div>
+            <div class="col-md">   
+                <i class="i fas fa-search" class="openBtn" onclick="openSearch()">
+                </i>
+            </div>
+            <div class="col-md" class="dropdown">
+                <button class="dropbtn" onclick="myFunction()"><i class="i fas fa-list"></i></button>
+                <div class="dropdown-content" id="myDropdown">
+                <a href="snu-top-stories.html">Top Stories</a>
+                <a href="snu-asia.html">Asia</a>
+                <a href="#">World</a>
+                <a href="snu-lifestyle.html">Lifestyle</a>
+                <a href="snu-business.html">Business</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <!--Javascript functions of the website-->
+    <script>
+        /* When the user clicks on the search icon*/
+        function openSearch() 
+        {
+            document.getElementById("search-page-Overlay").style.display = "block";
+        }
+        
+        /* When the use is at the search page overlay and clicks on the close icon*/
+        function closeSearch() 
+        {
+            document.getElementById("search-page-Overlay").style.display = "none";
+        }
+        
+        /* When the user clicks on the menu button, toggle between hiding and showing the dropdown content */
+        function myFunction() 
+        {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+        
+        /* Close the dropdown content of the menu if the user clicks outside of it*/
+        window.onclick = function(e) 
+        {
+            if (!e.target.matches('.dropbtn')) 
+            {
+                var myDropdown = document.getElementById("myDropdown");
+                if (myDropdown.classList.contains('show')) 
+                {
+                    myDropdown.classList.remove('show');
+                }
+            }
+        }
+    </script>
+    
+    <div class="website-layout">
+        <div class="article-heading">
+            <h5 id="section-resp">Asia</h5>
+            <div>
+                <h1>Malaysia ex-PM Najib’s final appeal starts despite lawyer trying to quit to force another delay</h1>
+                <h5>The lawyer cited lack of preparedness to start arguing his client's final appeal.</h5>
+            </div>
+        </div>
+        <div class="photo-and-credits">
+            <div id="credits">
+               <p><i class="i fas fa-user-alt"></i> Marcus Tan Lai He</p>
+                <p>@snumarcus</p>
+                <i class="i far fa-bookmark"></i>&nbsp
+                <i class="i far fa-envelope"></i>&nbsp
+                <i class="i fab fa-whatsapp"></i>&nbsp
+                <i class="i fas fa-sms"></i>
+                <br><br>
+                <img src="advertisements/clorox.jpeg" width="100%" height=auto>
+            </div>
+            <div>
+                <img id="img" src="images/malaysia-najib.webp">
+                <p>Former prime minister Najib Razak (centre) and his lawyers have attempted to postpone the appeal multiple times.</p>
+            </div>
+        </div>
+        <hr><br>
+        <div class="article-description">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="recommended">
+                        <h3>Recommended</h3>
+                        <div class="rec-topics">
+                        <h4>Ex-Malaysian navy chief says complaints to Najib, Zahid about ship contract unheeded</h4>
+                        <hr>
+                        <h4>Youth who raped 16-year-old he met at birthday gathering gets 8 years' jail, caning</h4>
+                        <hr>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-9">
+                    <p class="article-text">
+                    PUTRAJAYA - Former Malaysia premier Najib Razak’s lawyers on Thursday (Aug 18) opted not to make any oral arguments in their client’s final appeal against his corruption conviction and jail sentence.
+                    <br><br>
+                    Mr Hisyam Teh Poh Teik, the lead counsel in Najib’s defence team, said that “he was in no position to take part in proceedings” to argue for his client, a move that Najib described as leaving him “in effect, without a defence counsel”.
+                    <br><br>
+                    This unusual move came after Mr Hisyam earlier attempted, unsuccessfully, to discharge himself in front of a five-member bench at Malaysia’s highest court.
+                    <br><br>
+                    He cited a lack of preparedness to start arguing his client’s final appeal, which was scheduled to start on Thursday and was supposed to last until Aug 26. Mr Hisyam was appointed as Najib’s lead counsel only three weeks ago.
+                    <br><br>
+                    However, the judges’ panel chaired by Chief Justice Tengku Maimun Tuan Mat unanimously refused Mr Hisyam’s eleventh-hour attempt to discharge himself, which would have left Najib unrepresented.
+                    <br><br>
+                    Mr Hisyam opted not to submit any opening arguments to the court after being told to remain as Najib’s lawyer. This forced the judges to allow the prosecution to kick-start the appeal hearing by presenting their oral submissions, which usually takes place after the defence’s opening arguments.
+                    <br><br>
+                    Should Najib’s defence team persist in its stance for the rest of the hearing, the judges may only be able to rely on written submissions that were filed by Mr Hisyam’s predecessor  Muhammad Shafee Abdullah when a notice of this appeal was filed at the end of last year. 
+                    </p>
+                    <hr>
+                    <div class="asia-insider-signup">
+                        <h4>SNU Asia Insider</h4>
+                        <h5>Understand developments in Asia with bureau chief Marcus Tan and team in weekly newsletter</h5>
+                        <div class="signup-box">
+                            <form action="#">
+                                <div id="signup-box">
+                                    <input id="input" type="text" name="EmailAddress" placeholder="Enter your email">
+                                </div>
+                            </form>
+                            <button type="submit">Sign Up</button>
+                        </div>
+                        <p>By signing up, you agree to our Privacy Policy and Terms and Conditions.</p>
+                    </div>
+                    <hr>
+                    <p class="article-text">
+                    This will likely cut short the length of the hearing for the appeal, with only the prosecution choosing to present in an open court. Judges usually reserve their verdict for a future date.
+                    <br><br>
+                    The former prime minister, 69, is in the Federal Court seeking to overturn his 2020 conviction and sentence in a case pertaining to RM42 million he received illegally from SRC International, a former 1Malaysia Development Berhad (1MDB) subsidiary. 
+                    <br><br>
+                    He was found guilty of seven counts of abuse of power, money laundering and criminal breach of trust, and <span>faces up to 12 years in prison and RM210 million (S$65 million) in fines</span>. The Court of Appeal upheld his conviction in December last year.
+                    <br><br>
+                    The decision by Mr Hisyam came shortly after he attempted, once again, to seek a postponement of the hearing on Thursday morning, only to be swiftly rejected by the court. He had made a similar application on Tuesday, which the judges unanimously ruled against.
+                    <br><br>
+                    Najib and his newly appointed lawyers have attempted to postpone the appeal multiple times.
+                    <br><br>
+                    Last month, Najib discharged his long-time lawyer Mr Shafee and appointed Zaid Ibrahim Suffian TH Liew and Partners (Zist), led by former Cabinet minister Zaid Ibrahim. The firm applied to postpone the appeal dates in late July citing its recent appointment as Najib’s counsel, but the bid was unsuccessful.
+                    </p>
+                    <hr>
+                    <div class="photo-and-related-topics">
+                        <div>
+                            <img id="img" src="images/najib-children.webp">
+                            <p>Mr Norashman Najib and Ms Nooryana Najwa, children of Najib Razak, arriving at Putrajaya's Federal Court on Aug 16, 2022.</p>
+                        </div>
+                        <div class="related-topics">
+                            <h3>RELATED TOPICS</h3>
+                            <hr>
+                            <h4>As polls and his final appeal loom, ex-PM Najib amps up claims of conspiracy</h4>
+                            <hr>
+                            <h4>Malaysia ex-PM Najib's wife Rosmah gives up claim on seized diamond bracelet</h4>
+                            <hr>
+                            <h4></h4>
+                        </div>
+                    </div>
+                    <hr>
+                    <p class="article-text">
+                    Mr Hisyam, who leads his own law firm, was subsequently appointed as Najib’s lead counsel of a defence team that also includes Zist.
+                    <br><br>
+                    He then <span>attempted to introduce new evidence</span> when the final appeal started on Monday. When judges dismissed his motion, he applied for an adjournment, which was also <span>unanimously rejected by the panel</span>.
+                    <br><br>
+                    He had repeatedly requested up to four months to prepare for the case, but the court has said that Najib choosing to change counsel at the eleventh hour should not come at the court’s expense.
+                    <br><br>
+                    Mr Hisyam is also the defence lawyer of Umno president and Najib’s political ally Zahid Hamidi, who is currently on trial for a slate of graft charges.
+                    <br><br>
+                    Najib, who is facing five different court cases related to the 1MDB scandal, said in a statement on Thursday that his decision to change his defence representation “was not to simply delay the court process”. 
+                    <br><br>
+                    He said that despite the “stellar” job by his previous legal team, he had lost both his first trial and subsequent appeal.  
+                    <br><br>
+                    “It is with this backdrop I felt that a fresh perspective at the case to bring in new ideas was warranted and necessary for my final appeal before this court. This involves my life, nothing less.”
+                    <br><br>
+                    Najib risks losing his parliamentary seat of Pekan, which he has held for more than four decades, should his conviction be upheld.
+                    <br><br>
+                    He would also be <span>disqualified from contesting in Malaysia’s elections due latest by September next year</span>.
+                    <br><br>
+                    The hearing for the final appeal resumes on Friday.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<hr>
+<!--The footer of the webpage-->
+<footer>
+    <div class="footer-section">
+        <div class="row">
+            <div class="col-md-3" id="snu-subscribe">
+                <br>
+                <img id="news-paywall" src="advertisements/news-paywall.jpg">
+                <h4>Subscribe Today</h4>
+                <p>Enjoy unlimited access to exclusive stories and analyses by the SNU Media Group</p>
+                <div class="subscribe-box">
+                    <form action="#">
+                        <div class="form-box">
+                            <input type="text" name="EmailAddress" placeholder="Enter your email">
+                            <button type="submit"> Subscribe</button>
+                        </div> 
+                    </form>
+                </div><br>
+            </div>
+            
+            <div class="col-md-3" id="snu-sections">
+                
+                <ul>
+                    <li class="snu-sections">Asia</li>
+                    <li class="snu-sections">World</li>
+                    <li class="snu-sections">Singapore</li>
+                    <li class="snu-sections">Lifestyle</li>
+                    <li class="snu-sections">Business</li>
+                    <li class="snu-sections">Opinion</li>
+                
+                </ul>
+             
+                <ul>
+                    <li class="snu-sections">Technology</li>
+                    <li class="snu-sections">Multimedia</li>
+                    <li class="snu-sections">Sport</li>
+                    <li class="snu-sections">Videos</li>
+                    <li class="snu-sections">Podcasts</li>
+                
+                </ul>
+              
+            </div>
+                
+            
+            <div class="col-md-3" id="about-snu">
+            <ul>
+                <p class="about-snu">About Us</p>
+                <p class="about-snu">Contact Us</p>
+                <p class="about-snu">Terms & Conditions</p>
+                <p class="about-snu">Data Protection Policy</p>
+                <p class="about-snu">Need help? Reach us here.</p>
+                <p class="about-snu">Advertise with us</p>
+                </ul>
+            </div>
+
+            
+            <div class="col-md-3" id="snu-follow">
+                <div class="container text-center">
+                    <div class="row row-cols-2">
+                        <div class="col">
+                            <p class="snu-follow"><i class="i fas fa-file-pdf"></i> e-PDF </p>
+                            <hr>
+                        </div>
+                        <div class="col">
+                            <p class="snu-follow"><i class="i fab fa-instagram"></i> Instagram </p>
+                            <hr>
+                        </div>
+                        <div class="col">
+                            <p class="snu-follow"><i class="i fab fa-twitter"></i> Twitter</p>
+                            <hr>
+                        </div>
+                        <div class="col">
+                            <p class="snu-follow"><i class="i fab fa-facebook-f"></i> Facebook</p>
+                            <hr>
+                        </div>
+                        <div class="col">
+                            <p class="snu-follow"><i class="i fab fa-youtube"></i> Youtube</p>
+                            <hr>
+                        </div>
+                        <div class="col">
+                            <p class="snu-follow"><i class="i fas fa-podcast"></i> Podcasts</p>
+                            <hr>
+                        </div>
+                        <div class="col">
+                            <p class="snu-follow"><i class="i fab fa-telegram"></i> Telegram</p>
+                            <hr>
+                        </div>
+                        <div class="col">
+                            <p class="snu-follow"><i class="i fab fa-linkedin"></i> LinkedIn</p>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="go-back-top">
+                    <a href="snu-asia.html">BACK TO TOP 
+                        <i class="i fas fa-arrow-alt-circle-up"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--The copyright statement at the bottom of the footer-->
+    <hr>
+    <div class="copyright">
+        <h6>Copyright© SNU Media 2022. SNU Entertainment Pte Ltd. All rights reserved</h6>
+    </div>
+</footer>
+</html>

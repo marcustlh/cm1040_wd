@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <title>SNU Times - Breaking News,Singapore, world news etc. </title>
+    <meta charset="utf-8">
+    <!--Bootstrap 5.2.0 CSS and Javascript Plug-ins-->
+    <link rel="stylesheet" href ="bootstrap-5.2.0-dist/bootstrap-5.2.0-dist/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="bootstrap-5.2.0-dist/bootstrap-5.2.0-dist/js/bootstrap.min.js"></script>
+   
+    <!-- These are the external stylesheets of SNU Times -->
+    <link rel="stylesheet" href="snutimes-common.css"/>
+    <link rel="stylesheet" href="snumain.css"/>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+</head>
+<body>
+    <header role ="banner">
+    <div class ="news-title">
+        <h1 id="heading">SNU TIMES</h1>
+        <h4 id ="slogan">Always keep you updated.</h4>
+    </div>
+    </header>
+    <hr>
+    <!--Search page overlay-->
+    <div id="search-page-Overlay" class="overlay">
+        <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+        <div class="overlay-content">
+            <form action="#">
+              <input type="text" placeholder="Search.." name="search">
+              <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+            
+            <br><br><br>
+            <div class="recent-searches-and-topics">
+                <div id="recent-searches">
+                    <h3>Recent Searches <button><h5>Clear X</h5></button></h3>
+                    <hr>
+                    <h5>'High-severity vulnerability' found in Google Chrome browser, SingCERT advises users to install updates</h5>
+                    <h5>Life after Inside Maximum Security for two inmates: No longer behind bars, but it’s no bed of roses</h5>
+                    <h5>Parasite: What the Oscar win means for Korean cinema</h5>
+                </div>
+                <br>
+                <div id="related-topics">
+                    <h3>Related Topics:</h3>
+                    <hr>
+                    <div class="container">
+                    <div class="row">
+                        <div class="col"><input type="button" value="COVID-19"></div>
+                        <div class="col"><input type="button" value="Malaysia"></div>
+                        <div class="col"><input type="button" value="Omnicron"></div>
+                        <div class="col"><input type="button" value="Ukraine Invasion"></div>
+                        <div class="col"><input type="button" value="climate change"></div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Navigation bar of the website-->
+    <div class="news-navbar">
+        <div class="row" id="news-navbar">
+            <div class="col-md"><a href="snu-top-stories.html">Top Stories</a></div>
+            <div class="col-md"><a href="snu-singapore.html">Singapore</a></div>
+            <div class="col-md"><a href="snu-asia.html">Asia</a></div>
+            <div class="col-md">World</div>
+            <div class="col-md"><a href="snu-lifestyle.html">Lifestyle</a></div>
+            <div class="col-md"><a href="snu-business.html">Business</a></div>
+            <div class="col-md"><i class="i fas fa-user-alt"></i> Log In</div>
+            <div class="col-md"> Subscribe</div>
+            <div class="col-md"> 
+                <i class="i fas fa-search" class="openBtn" onclick="openSearch()">
+                </i>
+            </div>
+            <div class="col-md" class="dropdown">
+                    <button class="dropbtn" onclick="myFunction()"><i class="i fas fa-list"></i></button>
+                    <div class="dropdown-content" id="myDropdown">
+                    <a href="snu-top-stories.html">Top Stories</a>
+                    <a href="snu-asia.html">Asia</a>
+                    <a href="#">World</a>
+                    <a href="snu-lifestyle.html">Lifestyle</a>
+                    <a href="snu-business.html">Business</a>
+                    </div>
+            </div>
+            
+        </div>   
+    </div>
+    <hr>
+    <!--Javascript functions of the website-->
+    <script>
+        /* When the user clicks on the search icon*/
+        function openSearch() 
+        {
+            document.getElementById("search-page-Overlay").style.display = "block";
+        }
+        
+        /* When the use is at the search page overlay and clicks on the close icon*/
+        function closeSearch() 
+        {
+            document.getElementById("search-page-Overlay").style.display = "none";
+        }
+        
+        /* When the user clicks on the menu button, toggle between hiding and showing the dropdown content */
+        function myFunction() 
+        {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+        
+        /* Close the dropdown content of the menu if the user clicks outside of it*/
+        window.onclick = function(e) 
+        {
+            if (!e.target.matches('.dropbtn')) 
+            {
+                var myDropdown = document.getElementById("myDropdown");
+                if (myDropdown.classList.contains('show')) 
+                {
+                    myDropdown.classList.remove('show');
+                }
+            }
+        }
+    </script>
+
+    <div class="website-layout">    
+        <div class="top-stories-grid">
+            <div class="socials-and-weather">
+                <h2 id="section-heading">Top Stories</h2>
+                <div>
+                    <p>Wednesday September 5 2022</p>
+                    <hr>
+                    <p> 
+                        1-HR PM2.5:4-9
+                        <br>
+                        PARTLY CLOUDY
+                        <br>
+                        SINGAPORE
+                    </p>
+                    <hr>
+                </div>
+                <div>
+                    <div class="socials"><i class="i fas fa-file-pdf"></i> Download e-PDF</div><hr>
+                    <div class="socials"><i class="i fas fa-camera"></i> Gallery</div><hr>
+                    <div class="socials"><i class="i fas fa-play-circle"></i> Youtube</div><hr>
+                    <div class="socials"><i class="i fas fa-phone-alt"></i> Contact Us</div><hr>
+                    <div class="socials"><i class="i fas fa-link"></i> Share</div><hr>
+                    <div class="socials"><i class="i fas fa-envelope"></i> Newsletter</div><hr>
+                    <br>
+                    <div class="signup-box">
+                        <form action="#">
+                            <div id="signup-box">
+                                <input type="text" name="EmailAddress" placeholder="Enter your email">
+                                <button type="submit">Sign Up</button>
+                            </div>
+                        </form>
+
+                    </div>
+                    <p>By signing up our newletter, you agree to the T&C and our Privacy Policy.</p>
+                </div>
+            </div>
+            <div id="top-news">
+                <div class="breaking-news">
+                    <div id="parasite-headline">
+                        <a href="snu-top-stories.html"><h2>Parasite: What the Oscar win means for Korean cinema</h2>
+                        <p class="short-description">The cast of Parasite celebrate at the Oscars after the film took the award for Best Picture</p></a>
+                    </div>
+                    <a href="snu-top-stories.html"><img id ="img" src="images/award-winning-movie.jpg" alt="Parasite Image"></a>
+                </div>
+                <hr>
+                <div id="smaller-news-grid">
+                    <div>
+                        <img id="img" src="images/reuters-us.webp" width = 100% height= auto>
+                        <h3>Reuters US journalists plan to strike for first time in decades</h3>
+                        <p class="short-description">The group said about 90 per cent of the 300 or so Reuters employees it represents agreed to participate.</p>
+                    </div>
+                    <div>
+                        <img id="img" src="images/sri-lanka-troops.webp">
+                        <h3>Sri Lanka troops open fire to contain fuel riots</h3>
+                        <p class="short-description">Unprecedented queues for petrol and diesel were seen across the bankrupt country.</p>
+                    </div>
+                </div>
+            </div>
+            <div class = "ads-and-headlines">
+                <div id ="advertisement-main">
+                    <img src="advertisements/macs.gif" width=100% height=auto>
+                    <hr>
+                </div>
+                <div class="headlines">
+                    <h4>Life sentence for Singaporean man who murdered wife while on holiday in UK</h4>
+                    <hr>
+                    <h4>Pandemic deepened political divisions in most nations - but not in Singapore, survey finds</h4>
+                    <hr>
+                    <h4>NTUC launches year-long engagement exercise to hear views of workers across ages and sectors</h4>
+                    <hr>
+                    <h4>Parts of China's Hainan extend COVID-19 lockdown, Lhasa in Tibet tightens curbs</h4>
+                </div>    
+            </div>
+        </div>
+        <hr>
+        <hr>
+
+        <h2 id="section-heading">Singapore</h2>
+        <div class ="sg-section-grid">
+            <div class = "sg-small-headlines">
+                <br>
+                <img id="img" src="images/couple-arrested.jpg">
+                <br>
+                <h4>‘Our mistake’ to flee Singapore: Couple accused of cheating in Tradenation luxury goods scam charged</h4>
+                <hr>
+                <img id="img" src="images/traffic-junction.jpg" width="100%" height=auto>
+                <h4>COE premium for larger cars in Category B hits record high in latest bidding exercise</h4>
+            </div>
+            <div class ="sg-top-news">
+                <br>
+                <a href="snu-singapore.html"><img id="img" src="images/family_group_hug.jpg" width="100%" height=auto></a>
+                <a href="snu-singapore.html">
+                <h3>Life after Inside Maximum Security for two inmates: No longer behind bars, but it’s no bed of roses</h3>
+                <p class="short-description">Graceson Ang received hugs and gifts from his three children, aged seven to 13, during his first visit home in nearly four years on Father's Day.</p></a>
+            </div>
+            <div class="sg-news-subheadings">
+                <br>
+                <h4>Man admits threatening to spread ex-girlfriend's nude videos, make her an 'influencer'</h4>
+                <hr>
+                <h4>Commentary: Is Grab set to become the next Netflix – and not in a good way?</h4>
+                <hr>
+                <h4>Better accessibility for persons with disabilities set out in Enabling Masterplan for 2030</h4>
+                <hr>
+                <h4>Former lawyer jailed for taking video of neighbour showering</h4>
+            </div>
+        </div>
+        <hr>
+        <hr>
+        <h2 id="section-heading"> Asia</h2>
+        <div class="asia-section-grid">
+            <div></div>
+            <div class="asia-top-section">
+                <div class="asia-top-article">
+                    <div id="top-asia-headline">
+                        <a href="snu-asia.html">
+                        <h3>Malaysia ex-PM Najib’s final appeal starts despite lawyer trying to quit to force another delay</h3>
+                        <p class="short-description">The lawyer cited lack of preparedness to start arguing his client's final appeal.</p></a>
+                    </div>
+                    <a href="snu-asia.html">
+                    <img id="asia-img" src="images/malaysia-najib.webp">
+                    </a>
+                </div>
+                <hr>
+                <div class="mini-asia-headlines">
+                    <span>
+                        <h5>China warns Yangtze drought could last until September as it races to protect harvests</h5>
+                    </span>
+                    <span>
+                        <h5>Ancient Indian sport builds bridges across cultures in Hong Kong</h5>
+                    </span>
+                    <span>
+                        <h5>Taiwan's air force flexes muscles in face of Chinese war games</h5>
+                    </span>
+                    <div>
+                        <h5>More Japanese firms are raising wages to combat labour shortage: Reuters poll</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="asia-news-subheadings">
+                    <img id="img" src="images/combat-ship-marine.webp">
+                    <h4>Coming clean on combat ship fiasco is a risky gambit for Malaysia PM Ismail and Umno</h4>
+                    <hr>
+                    <h4>Top UN official presses Myanmar's military leader in rare visit</h4>
+                    <hr>
+                    <h4>China to send troops to Russia for 'Vostok' exercise</h4>
+                    <hr>
+                    <h4>Dressing the dead: Indonesian villagers clean corpses in afterlife ritual</h4>
+            </div>
+        </div>
+        <hr>
+        <hr>
+        <h2 id="section-heading"> Views & Opinions</h2>
+        <div class="views-and-opinions">
+            <div class="small-views-headlines">
+                <br>
+                <div class="views">
+                    <div class="profile">
+                        <img src="images/profile_male.png" width="80%" height=auto >
+                    </div>
+                    <div>
+                    <h3>Jonathan Eyal</h3>
+                        <p class="short-description">Germany rethinks energy mix amid gas squeeze</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="views">
+                    <div class="profile">
+                        <img src="images/profile_male-2.png" width="80%" height=auto>
+                    </div>
+                    <div>
+                    <h3>Danson Cheong</h3>
+                        <p class="short-description">Power Play: Beijing is not ready for war, but it means business</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="views">
+                    <div class="profile">
+                        <img src="images/profile-male-3.webp" width="80%" height=auto>
+                    </div>
+                    <div>
+                        <h3>Gideon Rachman</h3>
+                            <p class="short-description">Zawahiri's killing confirms Biden's 'over the horizon' counter-terrorism strategy</p>
+                    </div>
+                </div>
+            </div>
+            <div class="main-views">
+                <div id="curtain-img">
+                    <img src="images/stage-curtain.webp">
+                </div>
+                <div id="curtain-opinions">
+                    <div id="curtain-preview">
+                        <div>
+                            <h3>Charissa Yong</h3>
+                            <p class="short-description">Power Play: China's show of force hardens US resolve to defend Taiwan</p>
+                        </div>
+                        <div>
+                            <img src="images/profile-girl.png" width="80%" height=auto>
+                        </div>
+                    </div>
+                    <div id="curtain-preview">
+                        <div>
+                            <h3>Ang Qing</h3>
+                            <p class="short-description">Time to take more flexible approach to sick leave? We the millennials are not lazy, we just work smart</p>
+                        </div>
+                        <div>
+                            <img src="images/profile-girl-2.webp" width="80%" height=auto>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <hr>
+        <br>
+            <img id="covid-banner" src="images/covid-pandemic-banner.jpg" width="100%" height=auto>
+        <br><br>
+        <hr>
+        <hr>
+        <h2 id="section-heading">Lifestyle</h2>
+        <div class="lifestyle-grid">
+            <div class="lifestyle">
+                <a href="snu-lifestyle.html"><img id="img" src="images/kwong-cheong-thye.png" width="100%" height=auto>
+                <h3>How Kwong Cheong Thye’s fifth-gen scion is modernising his family’s 130-year-old soya sauce business</h3></a>
+            </div>
+            <div id="small-lifestyle">
+                <span id="small-lifestyle-sect">
+                    <img src="images/game-of-thrones.jpg" width="100%" height=auto>
+                    <h5>Game Of Thrones prequel keeps dragons, adds diversity</h5>
+                    <h6>Read More <i class="i fas fa-arrow-right"></i></h6>
+                </span>
+                <span id="small-lifestyle-sect">
+                    <img src="images/sydney-foodies.jfif" width="100%" height=auto>
+                    <h5>Sydney for foodies: The ultimate guide from cafes and bars to experiential dining</h5>
+                    <h6>Read More <i class="i fas fa-arrow-right"></i></h6>
+                </span>
+                <div id="small-lifestyle-sect">
+                    <img src="images/maison_shuko_japanese_fine_dining_zouk_group.jpg" width="100%" height=auto>
+                    <h5>Why is clubbing powerhouse Zouk Group moving into fine dining?</h5>
+                    <h6>Read More <i class="i fas fa-arrow-right"></i></h6>
+                </div>
+                <div id="small-lifestyle-sect">
+                    <img src="images/women-fashion.jpg" width="100%" height=auto>
+                    <h5>Inside Chanel’s world of haute couture: Beyond the expensive price tags of these lavish clothes</h5>
+                    <h6>Read More <i class="i fas fa-arrow-right"></i></h6>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <hr>
+        <h2 id="section-heading">Business</h2>
+        <div class="business-grid">
+            <div class="biz-section-1">
+                <div>
+                    <div id="biz-top-news">
+                        <img id="img" src='images/china-miniso.jpg'>
+                        <h4>Chinese retailer Miniso to ditch Japanese styling after backlash</h4>
+                    </div>
+                    <hr>
+                    <div id="biz-top-news">
+                        <img id="img" src="images/market-chart.jpg">
+                        <h4>Asian markets mixed as investors assess Fed outlook</h4>
+                    </div>
+                    <hr>
+                </div>
+                <div id="mini-biz-headlines">
+                    <h5>Crypto lender Hodlnaut lays off staff, reveals police probe</h5>
+                    <h5>Indonesia may hike fuel prices next week: Minister</h5>
+                    <h5>China to boost targeted policy support for economy: State media</h5>
+                </div>
+            </div>
+            <div class="biz-section-2">
+                <div>
+                    <div id="biz-breaking-headline">
+                        <a href="snu-business.html"><h4>'High-severity vulnerability' found in Google Chrome browser, SingCERT advises users to install updates</h4></a>
+                        <a href="snu-business.html"><img id="img" src='images/google-chrome.jpg'></a>
+                    </div>
+                    <br>
+                    <hr>
+                    <h4>Malaysia to make announcement soon on shorter weekly working hours: Report</h4>
+                    <hr>
+                    <h4>Apple warns of security flaw that lets hackers into iPhones, iPads and Macs</h4>
+                    <hr>
+                    <h4>High reserve price of S$1.8 billion likely a factor in lack of bids for People's Park Centre en bloc</h4>
+                </div>
+
+                <img id="ketchup-ad" src="advertisements/heinz-ketchup.jpg" width="100%" height=auto>
+
+            </div>
+        </div>
+    </div>
+</body>
+<hr>
+<hr>
+<!--The footer of the webpage-->
+<footer>
+    <div class="footer-section">
+        <div class="row">
+            <div class="col-md" id="snu-subscribe">
+                <br>
+                <img src="advertisements/news-paywall.jpg" width="100%" height=auto>
+                <h3>Subscribe Today</h3>
+                <p>Enjoy unlimited access to exclusive stories and analyses by the SNU Media Group</p>
+                <div class="subscribe-box">
+                    <form action="#">
+                        <div class="form-box">
+                            <input type="text" name="EmailAddress" placeholder="Enter your email">
+                            <button type="submit"> Subscribe</button>
+                        </div> 
+                    </form>
+                </div><br>
+            </div>
+            
+            <div class="col-md" id="snu-sections">
+                
+                <ul>
+                    <li class="snu-sections">Asia</li>
+                    <li class="snu-sections">World</li>
+                    <li class="snu-sections">Singapore</li>
+                    <li class="snu-sections">Lifestyle</li>
+                    <li class="snu-sections">Business</li>
+                    <li class="snu-sections">Opinion</li>
+                
+                </ul>
+             
+                <ul>
+                    <li class="snu-sections">Technology</li>
+                    <li class="snu-sections">Multimedia</li>
+                    <li class="snu-sections">Sport</li>
+                    <li class="snu-sections">Videos</li>
+                    <li class="snu-sections">Podcasts</li>
+                
+                </ul>
+              
+            </div>
+                
+
+            <div class="col-md" id="about-snu">
+            <ul>
+                <p class="about-snu">About Us</p>
+                <p class="about-snu">Contact Us</p>
+                <p class="about-snu">Terms & Conditions</p>
+                <p class="about-snu">Data Protection Policy</p>
+                <p class="about-snu">Need help? Reach us here.</p>
+                <p class="about-snu">Advertise with us</p>
+                </ul>
+            </div>
+
+            
+            <div class="col-md" id="snu-follow">
+                <div class="container text-center">
+                    <div class="row row-cols-2">
+                        <div class="col">
+                            <p class="snu-follow"><i class="i fas fa-file-pdf"></i> e-PDF </p>
+                            <hr>
+                        </div>
+                        <div class="col">
+                            <p class="snu-follow"><i class="i fab fa-instagram"></i> Instagram </p>
+                            <hr>
+                        </div>
+                        <div class="col">
+                            <p class="snu-follow"><i class="i fab fa-twitter"></i> Twitter</p>
+                            <hr>
+                        </div>
+                        <div class="col">
+                            <p class="snu-follow"><i class="i fab fa-facebook-f"></i> Facebook</p>
+                            <hr>
+                        </div>
+                        <div class="col">
+                            <p class="snu-follow"><i class="i fab fa-youtube"></i> Youtube</p>
+                            <hr>
+                        </div>
+                        <div class="col">
+                            <p class="snu-follow"><i class="i fas fa-podcast"></i> Podcasts</p>
+                            <hr>
+                        </div>
+                        <div class="col">
+                            <p class="snu-follow"><i class="i fab fa-telegram"></i> Telegram</p>
+                            <hr>
+                        </div>
+                        <div class="col">
+                            <p class="snu-follow"><i class="i fab fa-linkedin"></i> LinkedIn</p>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+                <br> 
+                <div class="go-back-top">&nbsp
+                    <a href="index.html">BACK TO TOP 
+                        <i class="i fas fa-arrow-alt-circle-up"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--The copyright statement at the bottom of the footer-->
+    <hr>
+    <div class="copyright">
+        <h6>Copyright© SNU Media 2022. SNU Entertainment Pte Ltd. All rights reserved</h6>
+    </div>
+</footer>
+</html>
